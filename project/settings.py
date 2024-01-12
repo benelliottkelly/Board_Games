@@ -16,6 +16,7 @@ import environ
 # Initialise environment variables
 env = environ.Env()
 environ.Env.read_env()
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -55,6 +56,17 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+REST_FRAMEWORK = {
+	'DEFAULT_AUTHENTICATION_CLASSES': (
+    # this acts as our secure route
+		'rest_framework_simplejwt.authentication.JWTAuthentication', 
+	)
+}
+
+SIMPLE_JWT = {
+	"ACCESS_TOKEN_LIFETIME": timedelta(days=3),
+}
 
 ROOT_URLCONF = 'project.urls'
 

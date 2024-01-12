@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 class User(AbstractUser):
-  # picture = models.ImageField(upload_to='./images/', default='/images/meeple.jpg', blank=True)
+  image = models.URLField(max_length=500, default='./images/meeple.jpg', blank=True)
   bio = models.TextField(max_length=3000, blank=True, null=True)
   # games_owned = models.ManyToManyField(
   #   'games_owned.GameOwned', 
