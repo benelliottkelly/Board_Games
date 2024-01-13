@@ -11,6 +11,13 @@ import './index.css'
 // Page components
 import App from './App.jsx'
 import Home from './components/Home.jsx'
+import Register from './components/Register.jsx'
+import Login from './components/Login.jsx'
+import SingleUser from './components/SingleUser.jsx'
+import AllBoardGames from './components/AllBoardGames.jsx'
+import CreateBoardGame from './components/CreateBoardGame.jsx'
+import SingleBoardGame from './components/SingleBoardGame.jsx'
+import EditBoardGame from './components/EditBoardGame.jsx'
 
 // Router
 const router = createBrowserRouter([
