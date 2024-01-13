@@ -18,6 +18,13 @@ import AllBoardGames from './components/AllBoardGames.jsx'
 import CreateBoardGame from './components/CreateBoardGame.jsx'
 import SingleBoardGame from './components/SingleBoardGame.jsx'
 import EditBoardGame from './components/EditBoardGame.jsx'
+import AllGenres from './components/AllGenres.jsx'
+import CreateGenre from './components/CreateGenre.jsx'
+import SingleGenre from './components/SingleGenre.jsx'
+import EditGenre from './components/EditGenre.jsx'
+
+// Loaders
+import { boardGamesLoader, singleBoardGameLoader, singleUserLoader, genresLoader, singleGenreLoader } from './utils/loaders.js'
 
 // Router
 const router = createBrowserRouter([
@@ -38,24 +45,53 @@ const router = createBrowserRouter([
         element: <Login />
       },
       {
-        path: 'users/:userPk',
-        element: <SingleUser />
+        path: 'users/:userpk',
+        element: <SingleUser />,
+        loader: async ({ params }) => singleUserLoader(params.userpk)
       },
       {
         path: '/boardgames',
-        element: <AllBoardGames />
+        element: <AllBoardGames />,
+        loader: boardGamesLoader
       },
       {
         path: '/boardgames/create',
-        element: <CreateBoardGame />
+        element: <CreateBoardGame />,
+        // add action here
+        loader: boardGamesLoader
       },
       {
-        path: '/boardgames/:boardgamePk',
-        element: <SingleBoardGame />
+        path: '/boardgames/:boardgamepk',
+        element: <SingleBoardGame />,
+        loader: async ({ params }) => singleBoardGameLoader(params.boardgamepk)
       },
       {
-        path: '/boardgames/:boardgamePk/edit',
-        element: <EditBoardGame />
+        path: '/boardgames/:boardgamepk/edit',
+        element: <EditBoardGame />,
+        // add action here
+        loader: async ({ params }) => singleBoardGameLoader(params.boardgamepk)
+      },
+      {
+        path: '/genres',
+        element: <AllGenres />,
+        loader: genresLoader
+      },
+      {
+        path: '/genres/create',
+        element: <CreateGenre />,
+        // add action here
+        loader: genresLoader
+      },
+      {
+        path: '/genres/:genrepk',
+        element: <SingleGenre />,
+        loader: async ({ params }) => singleGenreLoader(params.genrepk)
+      },
+      {
+        path: '/genres/:genrepk/edit',
+        element: <EditGenre />,
+        // add action here
+        loader: async ({ params }) => singleGenreLoader(params.genrepk)
       }
     ],
   },

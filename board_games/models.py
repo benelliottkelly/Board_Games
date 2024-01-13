@@ -19,7 +19,8 @@ class BoardGame(models.Model):
   )
   reviews = models.ManyToManyField(
     to='reviews.Review',
-    related_name='board_games'
+    related_name='board_games',
+    blank=True
   )
   created_by = models.ForeignKey(
     to='users.User',
