@@ -15,7 +15,8 @@ class Review(models.Model):
   date_added = models.DateTimeField(auto_now=True)
   likes = models.ManyToManyField(
     to='users.User',
-    related_name='ratings_liked'
+    related_name='ratings_liked',
+    blank=True
   )
 
   def __str__(self):

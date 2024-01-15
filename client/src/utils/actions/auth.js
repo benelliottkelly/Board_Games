@@ -10,7 +10,7 @@ export async function registerUser(request){
 
 export async function loginUser(request) {
   const data = await formToObj(request)
-  return await axios.post('/api/auth/login', data, {
+  return await axios.post('/api/auth/login/', data, {
       validateStatus: () => true
   })
 }

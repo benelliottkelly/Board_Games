@@ -1,9 +1,10 @@
+from .models import User
 from .serializers.common import RegistrationSerializer
 from rest_framework.generics import CreateAPIView, ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from django.contrib.auth import get_user_model
 from .serializers.common import UserSerializer
 from .serializers.populated import PopulatedUserSerializer
-# from lib.permissions import IsOwnerOrReadOnly, IsUserProfileOrReadOnly
+from lib.permissions import IsUserProfileOrReadOnly
 
 User = get_user_model()
 
@@ -21,9 +22,10 @@ class UserListCreateView(ListCreateAPIView):
 
 # Path: /users/:pk
 # Method GET
-class UserDetailView(ListCreateAPIView):
+class UserDetailView(RetrieveUpdateDestroyAPIView):
   queryset = User.objects.all()
   serializer_class = UserSerializer
+  permission_classes = [IsUserProfileOrReadOnly]
 
   def get_serializer_class(self):
     if self.request.method == 'GET':

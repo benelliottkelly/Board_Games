@@ -5,11 +5,6 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser):
   image = models.CharField(max_length=500, default='https://res.cloudinary.com/dqk3feale/image/upload/v1705318511/board-games/meeple_cblty1.jpg', blank=True)
   bio = models.TextField(max_length=3000, blank=True, null=True)
-  # games_owned = models.ManyToManyField(
-  #   to='games_owned.GameOwned', 
-  #   related_name='game_owner'
-  #   through='games_owned.GameOwned',
-  #   ),
   # outgoing_trades = models.ManyToManyField(
   #   to='trades.Trade',
   #   related_name='trade_origin'

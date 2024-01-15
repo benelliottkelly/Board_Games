@@ -5,6 +5,6 @@ from board_games.serializers.common import BoardGameSerializer
 # Add incoming trades
 from reviews.serializers.common import ReviewSerializer
 
-class PopulatedUserSerializer(UserSerializer):
+class PopulatedUserSerializer(UserSerializer):  
   reviews = ReviewSerializer(many=True)
-  games_owned = BoardGameSerializer
+  games_owned = BoardGameSerializer(many=True)

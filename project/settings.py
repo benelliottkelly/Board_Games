@@ -65,7 +65,7 @@ REST_FRAMEWORK = {
 	'DEFAULT_AUTHENTICATION_CLASSES': (
     # this acts as our secure route
 		'rest_framework_simplejwt.authentication.JWTAuthentication', 
-	)
+	),
 }
 
 SIMPLE_JWT = {

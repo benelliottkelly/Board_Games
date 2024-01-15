@@ -13,13 +13,13 @@ class BoardGame(models.Model):
     related_name='board_games'
   )
   owned_by = models.ManyToManyField(
-    'users.User',
+    to='users.User',
     through='games_owned.GameOwned',
     related_name='games_owned'
   )
   reviews = models.ManyToManyField(
     to='reviews.Review',
-    related_name='board_games',
+    related_name='game_name',
     blank=True
   )
   created_by = models.ForeignKey(

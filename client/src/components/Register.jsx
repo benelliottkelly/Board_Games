@@ -39,7 +39,7 @@ export default function Register() {
         <input type='hidden' name='image' value={formData.image ? formData.image : 'https://res.cloudinary.com/dqk3feale/image/upload/v1705318511/board-games/meeple_cblty1.jpg'}/>
         <input type="text" name='bio' placeholder='Bio' onChange={handleChange} value={formData.bio} />
         <button type="submit">Register</button>
-        {res && <p>{res.data.message}</p>}
+        {res && <p className='danger'>{res.status}: {res.statusText}</p>}
       </Form>
     </>
   )

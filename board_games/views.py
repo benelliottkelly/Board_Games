@@ -22,6 +22,6 @@ class BoardGameDetailView(RetrieveUpdateDestroyAPIView):
 
   def get_serializer_class(self):
     print('self request method -> ', self.request.method)
-    if self.request.method == 'PUT':
-      return BoardGameSerializer
-    return PopulatedBoardGameSerializer
+    if self.request.method == 'GET':
+      return PopulatedBoardGameSerializer
+    return BoardGameSerializer
