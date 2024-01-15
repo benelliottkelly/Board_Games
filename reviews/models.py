@@ -13,6 +13,10 @@ class Review(models.Model):
   rating = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
   text = models.TextField(max_length=3000)
   date_added = models.DateTimeField(auto_now=True)
+  likes = models.ManyToManyField(
+    to='users.User',
+    related_name='ratings_liked'
+  )
 
   def __str__(self):
     return f'{self.title} ({self.rating}/5) - {self.created_by}'
