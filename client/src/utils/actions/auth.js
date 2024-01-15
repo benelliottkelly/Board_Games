@@ -3,7 +3,7 @@ import { formToObj } from '../helpers/common'
 
 export async function registerUser(request){
   const data = await formToObj(request)
-  return await axios.post('api/auth/register', data, {
+  return await axios.post('/api/auth/register/', data, {
     validateStatus: () => true
   })
 }

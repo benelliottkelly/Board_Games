@@ -25,6 +25,7 @@ import EditGenre from './components/EditGenre.jsx'
 
 // Loaders
 import { boardGamesLoader, singleBoardGameLoader, singleUserLoader, genresLoader, singleGenreLoader } from './utils/loaders.js'
+import { loginUser, registerUser } from './utils/actions/auth.js'
 
 // Router
 const router = createBrowserRouter([
@@ -38,11 +39,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/register',
-        element: <Register />
+        element: <Register />,
+        action: async ({ request }) => registerUser(request)
       },
       {
         path: '/login',
-        element: <Login />
+        element: <Login />,
+        action: async ({ request }) => loginUser(request)
       },
       {
         path: 'users/:userpk',
