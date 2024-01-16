@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { loginOrProfile, removeToken } from "../utils/helpers/common"
 import { singleUserLoader } from "../utils/loaders"
 import { Link, useNavigate } from "react-router-dom"
@@ -9,11 +9,12 @@ import { loginContext } from './LoginContext'
 export default function NavProfile(){
 
   const navigate = useNavigate()
-  const { loggedIn, setLoggedIn } = useContext(loginContext)
-
+  // const componentIsMounted = useRef(true)
+  
   // States
-  const [ navView, setNavView ] = useState(0)
-  const [ profileData, setProfileData ] = useState(0)
+  const { loggedIn, setLoggedIn } = useContext(loginContext)
+  const [ navView, setNavView ] = useState()
+  const [ profileData, setProfileData ] = useState()
   
   // Check if user is logged in and match user to profile
   useEffect(() => {
@@ -22,23 +23,29 @@ export default function NavProfile(){
     console.log('User Match', userMatch)
   }, [loggedIn])
 
+  // useEffect(()=> {
+  //   return () => {
+  //     componentIsMounted.current = false
+  //   }
+  // }, [])
+
   useEffect(() => {
-    const fetchData = async () => {
+    setProfileData(false)
+    async function fetchData() {
       try {
-
           const profile = await singleUserLoader(navView)
-          console.log(profile)
-          setProfileData(profile)
-          
-
+          console.log('Profile -> ', profile)
+          // if (componentIsMounted.current) {
+          setProfileData({profile})
+          console.log('Profile data -> ', profileData)
+          console.log('Profile data > 0? -> ', profileData.pk > 0)
+          // }
       } catch (error) {
         console.log(error)
       }
-      console.log('Profile data -> ', profileData)
-      console.log('Profile data > 0? -> ', profileData > 0)
     }
     fetchData()
-  }, [ navView, loggedIn ])
+  }, [ loggedIn ])
 
   // Logout button
   function logOut(){
@@ -54,7 +61,7 @@ export default function NavProfile(){
   return(
     <>
       <button onClick={testFunction}>TEST</button>
-      { loggedIn === true && profileData.pk > 0 ? <div>
+      { loggedIn === true ? <div>
         <img src={profileData.image} alt={`${profileData.username}'s profile picture`}/>
         <Link to={`/users/${profileData.pk}/`}>{profileData.username}</Link>
         <button onClick={logOut}>Logout</button>

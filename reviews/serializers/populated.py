@@ -1,5 +1,6 @@
 from .common import ReviewSerializer
 from users.serializers.common import UserSerializer
+# from users.serializers.populated import PopulatedUserSerializer
 from board_games.serializers.common import BoardGameSerializer
 # from board_games.serializers.populated import PopulatedBoardGameSerializer
 

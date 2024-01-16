@@ -57,7 +57,7 @@ export default function SingleUser() {
         <h4>Reviews Made:</h4>
         { reviews.length > 0 ? 
           reviews.map((review, idx)=>{
-            return <div key={idx} className='review-cards' style={{backgroundImage: `url(${review.board_game.image})`}}>
+            return <div key={idx} className='review-cards' style={{backgroundImage: `url("${review.board_game.image}")`}}>
               <h4>{review.board_game.title} <span>({review.rating}/5)</span></h4>
               <p>{review.title}</p>
             </div>

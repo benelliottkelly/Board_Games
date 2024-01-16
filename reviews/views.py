@@ -1,5 +1,6 @@
 from .models import Review
 from .serializers.common import ReviewSerializer
+from .serializers.populated import PopulatedReviewSerializer
 from lib.views import OwnerListCreateView
 from lib.permissions import IsOwnerOrReadOnly
 from rest_framework.generics import UpdateAPIView, DestroyAPIView
@@ -17,7 +18,7 @@ class ReviewCreateView(OwnerListCreateView):
 # Methods: PUT, PATCH
 class ReviewLikeView(UpdateAPIView):
   queryset = Review.objects.all()
-  serializer_class = ReviewSerializer
+  serializer_class = PopulatedReviewSerializer
   permission_classes = [IsAuthenticated]
 
   def patch(self, request, *args, **kwargs):

@@ -7,14 +7,7 @@ export async function singleUserLoader(userpk){
 
 export async function boardGamesLoader(){
   const res = await fetch(`/api/boardgames/`)
-  const boardgames = await res.json()
-  const res2 = await fetch(`/api/users/`)
-  const users = await res2.json()
-  const res3 = await fetch(`/api/gamesowned/`)
-  const gamesowned = await res3.json()
-  const res4 = await fetch(`/api/reviews/`)
-  const reviews = await res4.json()
-  return { users , boardgames, gamesowned, reviews }
+  return res.json()
 }
 
 export async function singleBoardGameLoader(boardgamepk){
