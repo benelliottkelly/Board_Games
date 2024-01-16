@@ -1,32 +1,27 @@
 import { useEffect, useState } from "react"
-import { activeUser, isUserActiveUser, matchingUser, removeToken } from "../utils/helpers/common"
-import { useActionData, useLoaderData, useNavigate } from "react-router-dom"
-import { getToken } from "../utils/helpers/common"
+import { isUserActiveUser, removeToken } from "../utils/helpers/common"
+import { useActionData, useLoaderData } from "react-router-dom"
+import { useContext } from 'react'
+import { loginContext } from './LoginContext'
 
-// Bootstrap components
 
 export default function SingleUser() {
 
   const res = useActionData()
-  const navigate = useNavigate()
+  const { loggedIn, setLoggedIn } = useContext(loginContext)
 
   const loadedData = useLoaderData()
-  const { user, boardgames, gamesowned, reviews} = loadedData
   console.log(loadedData)
-  const { pk, image, username, first_name, last_name, email, bio, games_owned, reviews: user_reviews } = user
-
+  const { pk, image, username, first_name, last_name, email, bio, games, reviews } = loadedData
 
   // States
   const [ view, setView ] = useState(false)
-  const [ listOfGames, setListOfGames ] = useState([])
-  const [ listOfReviews, setListOfReviews ] = useState([])
 
   // Checks if user is the owner of the page and changes display accordingly
   useEffect(() => {
     const userMatch = isUserActiveUser(pk)
     setView(userMatch)
-  }, [view]
-  )
+  }, [view] )
 
 
   // Logout button
@@ -34,23 +29,6 @@ export default function SingleUser() {
     removeToken()
     setView(false)
   }
-
-  // Matches owned games id's with list of games
-//   useEffect(() => {
-//     const mappedGames = games_owned.map((game, idx) => {
-//       console.log('game -> ', game)
-//       return boardgames.find((boardgame) => boardgame.id === game)
-//     })
-//     setListOfGames(mappedGames)
-// }, [])
-
-// useEffect(() => {
-//   const mappedReviews = user_reviews.map((review, idx) => {
-//     console.log('review -> ', review)
-//     return reviews.find((review) => user_reviews.id === review)
-//   })
-//   setListOfReviews(mappedReviews)
-// }, [])
 
   return (
     <>
@@ -63,11 +41,12 @@ export default function SingleUser() {
       <div>
         <h4>Owned Games:</h4>
         {/* Add in button to add more games */}
-        { games_owned.length > 0 ? 
-          games_owned.map((game, idx)=>{
+        { games.length > 0 ? 
+          games.map((obj, idx)=>{
             return <div key={idx}>
-              <h4>{game.title}<span>({game.year})</span></h4>
-              <img src={game.image}/>
+              <h4>{obj.game.title} <span>({obj.game.year})</span></h4>
+              <img src={obj.game.image}/>
+              <h4>Quantity: {obj.quantity}</h4>
             </div>
           })
           :
@@ -78,10 +57,9 @@ export default function SingleUser() {
         <h4>Reviews Made:</h4>
         { reviews.length > 0 ? 
           reviews.map((review, idx)=>{
-            console.log(review)
-            return <div key={idx}>
-              <h4>{review.title} <span>({review.rating}/5)</span></h4>
-              {/* <img src={game.image}/> */}
+            return <div key={idx} className='review-cards' style={{backgroundImage: `url(${review.board_game.image})`}}>
+              <h4>{review.board_game.title} <span>({review.rating}/5)</span></h4>
+              <p>{review.title}</p>
             </div>
           })
           :

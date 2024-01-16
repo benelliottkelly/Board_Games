@@ -29,7 +29,6 @@ class RegistrationSerializer(serializers.ModelSerializer):
     return user
   
 class UserSerializer(serializers.ModelSerializer):
-
   class Meta:
     model = User
     fields = (
@@ -40,6 +39,6 @@ class UserSerializer(serializers.ModelSerializer):
       'email', 
       'image', 
       'bio', 
-      'games_owned', 
       'reviews',
+      'games'
       )

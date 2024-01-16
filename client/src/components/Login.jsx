@@ -1,19 +1,26 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Form, useActionData, useNavigate } from "react-router-dom"
 import { setToken } from "../utils/helpers/common"
+import { useContext } from 'react'
+import { loginContext } from './LoginContext'
 
 export default function Login() {
   const res = useActionData()
   const navigate = useNavigate()
 
+  // State 
+  // const [res, setRes] = useState()
+  const { loggedIn, setLoggedIn } = useContext(loginContext)
+
   useEffect(() => {
-    console.log(res)
+    console.log('res = ', res)
     if(res?.status === 200) {
       console.log(res)
       setToken(res.data.access)
+      setLoggedIn(true)
       navigate('/')
     }
-  }, [res, navigate])
+  }, [res])
 
   return (
     <>

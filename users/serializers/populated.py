@@ -1,10 +1,12 @@
 from .common import UserSerializer
 from games_owned.serializers.common import GameOwnedSerializer
-from board_games.serializers.common import BoardGameSerializer
+from games_owned.serializers.populated import PopulatedGameOwnedSerializer
+# from board_games.serializers.common import BoardGameSerializer
 # Add outgoing trades
 # Add incoming trades
 from reviews.serializers.common import ReviewSerializer
+from reviews.serializers.populated import PopulatedReviewSerializer
 
 class PopulatedUserSerializer(UserSerializer):  
-  reviews = ReviewSerializer(many=True)
-  games_owned = BoardGameSerializer(many=True)
+  reviews = PopulatedReviewSerializer(many=True)
+  games = PopulatedGameOwnedSerializer(many=True)

@@ -1,9 +1,10 @@
 from .common import ReviewSerializer
 from users.serializers.common import UserSerializer
 from board_games.serializers.common import BoardGameSerializer
-from board_games.serializers.populated import PopulatedBoardGameSerializer
+# from board_games.serializers.populated import PopulatedBoardGameSerializer
 
 class PopulatedReviewSerializer(ReviewSerializer):
+  board_game = BoardGameSerializer()
   created_by = UserSerializer()
-  game_name = BoardGameSerializer(many=True)
+  # games_reviewed = BoardGameSerializer(many=True)
   likes = UserSerializer(many=True)

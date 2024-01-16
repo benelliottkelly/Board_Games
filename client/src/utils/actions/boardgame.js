@@ -4,7 +4,7 @@ import { redirect } from 'react-router-dom'
 
 export async function createBoardGame(request){
   const data = await formToObj(request)
-  return await axios.post(`/api/boardgames`, data, {
+  return await axios.post(`/api/boardgames/`, data, {
     validateStatus: () => true,
     headers: {
       Authorization: `Bearer ${getToken()}`
@@ -14,7 +14,7 @@ export async function createBoardGame(request){
 
 export async function editBoardGame(request, pk){
   const data = await formToObj(request)
-  return await axios.patch(`/api/boardgames/${pk}`, data, {
+  return await axios.patch(`/api/boardgames/${pk}/`, data, {
     validateStatus: () => true,
     headers: {
       Authorization: `Bearer ${getToken()}`
@@ -23,7 +23,7 @@ export async function editBoardGame(request, pk){
 }
 
 export async function deleteBoardGame(pk){
-  await axios.delete(`/api/boardgames/${pk}`, {
+  await axios.delete(`/api/boardgames/${pk}/`, {
     validateStatus: () => true,
     headers: {
       Authorization: `Bearer ${getToken()}`

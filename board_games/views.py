@@ -11,7 +11,7 @@ from rest_framework.generics import RetrieveUpdateDestroyAPIView
 # Methods: GET, POST
 class BoardGameListCreateView(OwnerListCreateView):
   queryset = BoardGame.objects.all()
-  serializer_class = BoardGameSerializer
+  serializer_class = PopulatedBoardGameSerializer
   permission_classes = [IsAuthenticatedOrReadOnly]
 
 # Path: /boardgames/:pk

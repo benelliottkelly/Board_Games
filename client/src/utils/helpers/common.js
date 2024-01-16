@@ -59,3 +59,29 @@ export function isUserActiveUser(pk){
     return true
   }
 }
+
+// Function to check if user is logged in and which user
+export function loginOrProfile(){
+  const token = getToken()
+  if (!token) {
+    return 0
+  } else {
+    const b64 = token.split('.')[1]
+    const payload = JSON.parse(atob(b64))
+    if (payload.user_id){
+      return payload.user_id
+    } else {
+      return 0
+    }
+  }
+}
+
+// Function returning true or false based on local storage token
+export function doesTokenExist(){
+  const token = getToken()
+  if (!token) {
+    return false
+  } else {
+    return true
+  }
+}

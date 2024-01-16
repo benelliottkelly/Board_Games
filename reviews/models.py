@@ -9,6 +9,11 @@ class Review(models.Model):
     related_name='reviews',
     null=True
   )
+  board_game = models.ForeignKey(
+    to='board_games.BoardGame',
+    on_delete=models.CASCADE,
+    related_name='reviews'
+  )
   title = models.CharField(max_length=255)
   rating = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
   text = models.TextField(max_length=3000)

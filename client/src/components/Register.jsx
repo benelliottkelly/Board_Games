@@ -3,10 +3,11 @@ import { Form, useActionData, useNavigate } from 'react-router-dom'
 import ImageUploadField from './ImageUploadField'
 
 export default function Register() {
-
+  // Loaders
   const res = useActionData()
   const navigate = useNavigate()
 
+  // States
   const [ formData, setFormData ] = useState({
     username: '',
     email: '',
@@ -16,6 +17,7 @@ export default function Register() {
     bio: ''
   })
 
+  // Functions
   function handleChange(e){
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
