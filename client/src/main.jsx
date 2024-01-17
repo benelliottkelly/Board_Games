@@ -1,11 +1,12 @@
 // Packages
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, Route, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 
 // Styles
 import './index.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 // Page components
@@ -25,7 +26,10 @@ import EditGenre from './components/EditGenre.jsx'
 
 // Loaders
 import { boardGamesLoader, singleBoardGameLoader, singleUserLoader, genresLoader, singleGenreLoader } from './utils/loaders.js'
+
+// Actions
 import { loginUser, registerUser } from './utils/actions/auth.js'
+import { createBoardGame } from './utils/actions/boardgame.js'
 
 // Router
 const router = createBrowserRouter([
@@ -55,6 +59,7 @@ const router = createBrowserRouter([
       {
         path: '/boardgames',
         element: <AllBoardGames />,
+        action: async ({ request }) => createBoardGame(request),
         loader: boardGamesLoader
       },
       {

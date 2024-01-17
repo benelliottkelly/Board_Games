@@ -16,9 +16,10 @@ export const LoginProvider = (props) => {
     function checkStateOnRefresh(){
       const data = doesTokenExist()
       console.log('logged in =', data)
+      setLoggedIn(data)
     }
     checkStateOnRefresh()
-  })
+  }, [])
 
   return (
     <loginContext.Provider value={val}>

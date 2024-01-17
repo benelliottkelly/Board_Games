@@ -20,8 +20,7 @@ class BoardGame(models.Model):
   created_by = models.ForeignKey(
     to='users.User',
     on_delete=models.CASCADE,
-    related_name='created_games',
-    null=True
+    related_name='created_games'
   )
   date_added = models.DateTimeField(auto_now_add=True)
   last_edited = models.DateTimeField(auto_now=True)

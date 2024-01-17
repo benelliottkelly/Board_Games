@@ -4,6 +4,8 @@ import { redirect } from 'react-router-dom'
 
 export async function createBoardGame(request){
   const data = await formToObj(request)
+  data.genre = data.genre.split(',')
+  console.log('Request ->', data)
   return await axios.post(`/api/boardgames/`, data, {
     validateStatus: () => true,
     headers: {

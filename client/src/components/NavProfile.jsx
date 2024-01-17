@@ -13,15 +13,15 @@ export default function NavProfile(){
   
   // States
   const { loggedIn, setLoggedIn } = useContext(loginContext)
-  const [ navView, setNavView ] = useState()
+  const [ userPK, setUserPK ] = useState()
   const [ profileData, setProfileData ] = useState()
   
   // Check if user is logged in and match user to profile
   useEffect(() => {
     const userMatch = loginOrProfile()
-    setNavView(userMatch)
+    setUserPK(userMatch)
     console.log('User Match', userMatch)
-  }, [loggedIn])
+  }, [ loggedIn ])
 
   // useEffect(()=> {
   //   return () => {
@@ -30,13 +30,14 @@ export default function NavProfile(){
   // }, [])
 
   useEffect(() => {
-    setProfileData(false)
+    // setProfileData(false)
     async function fetchData() {
+      if (userPK) {
       try {
-          const profile = await singleUserLoader(navView)
+          const profile = await singleUserLoader(userPK)
           console.log('Profile -> ', profile)
           // if (componentIsMounted.current) {
-          setProfileData({profile})
+          setProfileData(profile)
           console.log('Profile data -> ', profileData)
           console.log('Profile data > 0? -> ', profileData.pk > 0)
           // }
@@ -44,8 +45,9 @@ export default function NavProfile(){
         console.log(error)
       }
     }
+    }
     fetchData()
-  }, [ loggedIn ])
+  }, [ userPK ])
 
   // Logout button
   function logOut(){
@@ -61,7 +63,7 @@ export default function NavProfile(){
   return(
     <>
       <button onClick={testFunction}>TEST</button>
-      { loggedIn === true ? <div>
+      { loggedIn === true && profileData ? <div>
         <img src={profileData.image} alt={`${profileData.username}'s profile picture`}/>
         <Link to={`/users/${profileData.pk}/`}>{profileData.username}</Link>
         <button onClick={logOut}>Logout</button>

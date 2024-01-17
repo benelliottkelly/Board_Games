@@ -64,14 +64,14 @@ export function isUserActiveUser(pk){
 export function loginOrProfile(){
   const token = getToken()
   if (!token) {
-    return 0
+    return false
   } else {
     const b64 = token.split('.')[1]
     const payload = JSON.parse(atob(b64))
     if (payload.user_id){
       return payload.user_id
     } else {
-      return 0
+      return false
     }
   }
 }

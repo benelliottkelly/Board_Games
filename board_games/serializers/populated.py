@@ -11,7 +11,7 @@ from games_owned.serializers.populated import PopulatedGameOwnedSerializer
 
 class PopulatedBoardGameSerializer(BoardGameSerializer):
   genre = PopulatedGenreSerializer(many=True)
-  owned_by = UserSerializer(many=True)
-  games = PopulatedGameOwnedSerializer(many=True)
-  reviews = PopulatedReviewSerializer(many=True)
+  owned_by = UserSerializer(many=True, required=False)
+  games = PopulatedGameOwnedSerializer(many=True, required=False)
+  reviews = PopulatedReviewSerializer(many=True, required=False)
   created_by = UserSerializer()

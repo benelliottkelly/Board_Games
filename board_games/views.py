@@ -11,8 +11,13 @@ from rest_framework.generics import RetrieveUpdateDestroyAPIView
 # Methods: GET, POST
 class BoardGameListCreateView(OwnerListCreateView):
   queryset = BoardGame.objects.all()
-  serializer_class = PopulatedBoardGameSerializer
+  # serializer_class = PopulatedBoardGameSerializer
   permission_classes = [IsAuthenticatedOrReadOnly]
+
+  def get_serializer_class(self):
+    if self.request.method == 'GET':
+      return PopulatedBoardGameSerializer
+    return BoardGameSerializer
 
 # Path: /boardgames/:pk
 # Methods: GET, PUT, PATCH, DELETE
