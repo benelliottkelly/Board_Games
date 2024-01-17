@@ -75,7 +75,7 @@ export default function CreateBoardGame() {
           <input type='hidden' name='image' value={formData.image}/>
           <input type="text" name='description' placeholder='Description' onChange={handleChange} value={formData.description} />
           <button type="submit">Add Game</button>
-          {res && <p className='danger'>{res.status}: {res.statusText}</p>}
+          {res && <p>{res.status}: {res.statusText}</p>}
         </Form>
         :
         <Link to={`/login/`}>Login to add a new board game</Link>

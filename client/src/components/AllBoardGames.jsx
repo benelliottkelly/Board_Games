@@ -1,14 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useActionData, useLoaderData } from 'react-router-dom'
-import { createGenre } from '../utils/actions/genres'
-import { Form, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import CreateBoardGame from './CreateBoardGame'
 import { v4 as uuidv4 } from 'uuid'
 
 // Bootstrap Components
 import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
-import CloseButton from 'react-bootstrap/CloseButton'
 
 export default function AllBoardGames() {
 
@@ -16,7 +13,6 @@ export default function AllBoardGames() {
   const loadedData = useLoaderData()
   const res = useActionData()
   const { boardgames, genres } = loadedData
-  // console.log(boardgames)
   const { created_by, date_added, description, genre, id, image, owned_by, publisher, reviews, title, year } = boardgames
   
   // States
