@@ -5,7 +5,6 @@ import { redirect } from 'react-router-dom'
 export async function createBoardGame(request){
   const data = await formToObj(request)
   data.genre = data.genre.split(',')
-  console.log('Request ->', data)
   return await axios.post(`/api/boardgames/`, data, {
     validateStatus: () => true,
     headers: {
@@ -15,7 +14,12 @@ export async function createBoardGame(request){
 }
 
 export async function editBoardGame(request, pk){
-  const data = await formToObj(request)
+  // const data = await formToObj(request)
+  const data = request
+  if (data.genre) {
+    data.genre = data.genre.split(',')
+  }
+  console.log('Patch data -> ', data)
   return await axios.patch(`/api/boardgames/${pk}/`, data, {
     validateStatus: () => true,
     headers: {

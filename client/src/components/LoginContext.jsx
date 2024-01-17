@@ -15,7 +15,6 @@ export const LoginProvider = (props) => {
   useState(() => {
     function checkStateOnRefresh(){
       const data = doesTokenExist()
-      console.log('logged in =', data)
       setLoggedIn(data)
     }
     checkStateOnRefresh()

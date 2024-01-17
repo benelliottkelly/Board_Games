@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { loginOrProfile, activeUser } from '../utils/helpers/common'
+import { loginOrProfile } from '../utils/helpers/common'
 import { Form, Link, useActionData, useLoaderData, useNavigate } from 'react-router-dom'
 import ImageUploadField from './ImageUploadField'
 import { genresLoader } from '../utils/loaders'
@@ -12,8 +12,6 @@ export default function CreateBoardGame() {
   const navigate = useNavigate()
 
   const { boardgames, genres } = loadedData
-  console.log('Board Games: ',boardgames)
-  console.log('Genres: ',genres)
 
   // States
   const [ formData, setFormData ] = useState({
@@ -30,15 +28,11 @@ export default function CreateBoardGame() {
 
   // Functions
   function handleChange(e){
-    console.log(e)
-    console.log('e target name', e.target.name)
     setFormData({ ...formData, [e.target.name]: e.target.value })
-    console.log(formData)
   }
 
   function handleArrayChange(e){
     const value = e.target.value
-    console.log('genre value', e.target.value)
     const foundIndex = formData.genre.indexOf(value)
 
     if (foundIndex !== -1) {
@@ -48,13 +42,11 @@ export default function CreateBoardGame() {
     } else {
       setFormData({ ...formData, genre: [...formData.genre, value] })
     } 
-    console.log(formData)
   }
 
   useEffect(() => {
     const userMatch = loginOrProfile()
     setUserPK(userMatch)
-    console.log('User Match', userMatch)
   }, [])
 
   useEffect(() => {
@@ -82,7 +74,7 @@ export default function CreateBoardGame() {
           <ImageUploadField setFormData={setFormData} formData={formData}/> 
           <input type='hidden' name='image' value={formData.image}/>
           <input type="text" name='description' placeholder='Description' onChange={handleChange} value={formData.description} />
-          <button type="submit" onClick={console.log(formData)}>Add Game</button>
+          <button type="submit">Add Game</button>
           {res && <p className='danger'>{res.status}: {res.statusText}</p>}
         </Form>
         :

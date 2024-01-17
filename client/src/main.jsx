@@ -29,7 +29,7 @@ import { boardGamesLoader, singleBoardGameLoader, singleUserLoader, genresLoader
 
 // Actions
 import { loginUser, registerUser } from './utils/actions/auth.js'
-import { createBoardGame } from './utils/actions/boardgame.js'
+import { createBoardGame, editBoardGame } from './utils/actions/boardgame.js'
 
 // Router
 const router = createBrowserRouter([
@@ -76,7 +76,7 @@ const router = createBrowserRouter([
       {
         path: '/boardgames/:boardgamepk/edit',
         element: <EditBoardGame />,
-        // add action here
+        action: async ({ request, params }) => editBoardGame(request, params.boardgamepk),
         loader: async ({ params }) => singleBoardGameLoader(params.boardgamepk)
       },
       {

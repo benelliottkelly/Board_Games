@@ -14,8 +14,11 @@ export async function boardGamesLoader(){
 }
 
 export async function singleBoardGameLoader(boardgamepk){
-  const res = await fetch(`/api/boardgames/${boardgamepk}`)
-  return res.json()
+  const res = await fetch(`/api/boardgames/${boardgamepk}/`)
+  const boardGame = await res.json()
+  const res2 = await fetch(`/api/genres/`)
+  const genres = await res2.json()
+  return { boardGame, genres}
 }
 
 export async function genresLoader(){
@@ -24,6 +27,6 @@ export async function genresLoader(){
 }
 
 export async function singleGenreLoader(genrepk){
-  const res = await fetch(`/api/genre/${genrepk}`)
+  const res = await fetch(`/api/genre/${genrepk}/`)
   return res.json()
 }

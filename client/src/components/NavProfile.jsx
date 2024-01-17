@@ -1,15 +1,12 @@
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState } from "react"
 import { loginOrProfile, removeToken } from "../utils/helpers/common"
 import { singleUserLoader } from "../utils/loaders"
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useContext } from 'react'
 import { loginContext } from './LoginContext'
 
 
 export default function NavProfile(){
-
-  const navigate = useNavigate()
-  // const componentIsMounted = useRef(true)
   
   // States
   const { loggedIn, setLoggedIn } = useContext(loginContext)
@@ -20,27 +17,14 @@ export default function NavProfile(){
   useEffect(() => {
     const userMatch = loginOrProfile()
     setUserPK(userMatch)
-    console.log('User Match', userMatch)
   }, [ loggedIn ])
 
-  // useEffect(()=> {
-  //   return () => {
-  //     componentIsMounted.current = false
-  //   }
-  // }, [])
-
   useEffect(() => {
-    // setProfileData(false)
     async function fetchData() {
       if (userPK) {
       try {
           const profile = await singleUserLoader(userPK)
-          console.log('Profile -> ', profile)
-          // if (componentIsMounted.current) {
           setProfileData(profile)
-          console.log('Profile data -> ', profileData)
-          console.log('Profile data > 0? -> ', profileData.pk > 0)
-          // }
       } catch (error) {
         console.log(error)
       }
