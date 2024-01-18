@@ -82,7 +82,7 @@ export default function EditBoardGame() {
           <ImageUploadField setFormData={setFormData} formData={formData}/> 
           <input type='hidden' name='image' value={formData.image}/>
           <input type="text" name='description' placeholder='Description' value={formData.image}/>
-          <button type="submit" >Add Game</button>
+          <button type="submit" >Confirm Changes</button>
           {res && <p className='danger'>{res.status}: {res.statusText}</p>}
         </Form>
         :

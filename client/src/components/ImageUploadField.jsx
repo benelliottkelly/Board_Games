@@ -17,11 +17,18 @@ export default function ImageUploadField({ formData, setFormData }) {
     setFormData({ ...formData, image: secure_url })
   }
 
+  function handleClearImage(){
+    setFormData({ ...formData, image: null})
+  }
+
 
   return (
     <>
       {formData.image ?
-        <img src={formData.image} alt='Uploaded image'/>
+        <div className="image-upload-container">
+          <button onClick={handleClearImage}>❌</button>
+          <img className="uploading-image" src={formData.image} alt='Uploaded image'/>
+        </div>
         :
         <input type='file' name='image' onChange={handleImageUpload}/>
       }

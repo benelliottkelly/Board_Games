@@ -1,0 +1,70 @@
+@import '../global/variables.scss';
+
+header{
+  @include flex-center(column);
+  flex-wrap: wrap;
+  width: 100vw;
+  min-width: 375px;
+  min-height: 100px;
+  padding: 10px;
+  background-color: #325A8B;
+  button {
+    margin: 0.5em;
+    width: 10em;
+    height: 4em;
+    font-family: 'SofiaProSoft' !important;
+  }
+  img{
+    display: none;
+  }
+  Link {
+    text-decoration: none;
+  }
+  .nav-profile {
+    @include flex-center(row);
+    height: 100%;
+    min-width: 100px;
+    .linkToProfile{
+      height: 100%;
+      @include flex-center(row);
+    }
+  }
+} 
+
+
+// Larger than a standard mobile phone (landscape phones, 576px and up)
+@media (min-width: 375px) { 
+  header {
+    @include flex-between(row);
+    height: 100px;
+    padding: 5px;
+    background-color: #325A8B;
+    button {
+      margin: 0.5em;
+    }
+    img{
+      display: inline-block;
+      height: 90%;
+      border: solid 2px #FAFCE6;
+      border-radius: 10px;
+    }
+    Link {
+      text-decoration: none;
+    }
+    .nav-profile {
+      @include flex-between(row);
+      height: 100%;
+      min-width: 100px;
+      .profile-link {
+        display: none;
+      }
+      .image-link-to-profile {
+        height: 100%;
+        @include flex-center(row);
+        img {
+          display: inline-block;
+        }
+      }
+    }
+  }
+ }

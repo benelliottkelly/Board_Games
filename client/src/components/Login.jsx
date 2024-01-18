@@ -24,13 +24,15 @@ export default function Login() {
 
   return (
     <>
+    <section className="form-container">
       <h1>Login</h1>
       <Form className='form' id='login-form' method='POST'>
         <input type="username" name="username" placeholder='Username' />
         <input type="password" name="password" placeholder="Password" />
-        <button type="submit">Login</button>
+        <button type="submit" className="btn btn-primary">Login</button>
         {res && <p className='danger'>{res.data.message}</p>}
       </Form>
+    </section>
     </>
   )
 }

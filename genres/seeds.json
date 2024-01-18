@@ -1,0 +1,100 @@
+[
+{
+  "model": "genres.genre",
+  "pk": 1,
+  "fields": {
+    "name": "Area Control"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 2,
+  "fields": {
+    "name": "Cooperative"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 3,
+  "fields": {
+    "name": "Deck-Building"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 4,
+  "fields": {
+    "name": "Eurogame"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 5,
+  "fields": {
+    "name": "Legacy"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 6,
+  "fields": {
+    "name": "Social Deduction"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 7,
+  "fields": {
+    "name": "Worker Placement"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 8,
+  "fields": {
+    "name": "Dungeon Crawler"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 9,
+  "fields": {
+    "name": "Engine Builder"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 10,
+  "fields": {
+    "name": "Push Your Luck"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 11,
+  "fields": {
+    "name": "Wargame"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 12,
+  "fields": {
+    "name": "Strategy"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 13,
+  "fields": {
+    "name": "Family"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 14,
+  "fields": {
+    "name": "Hand Management"
+  }
+}
+]

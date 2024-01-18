@@ -1,0 +1,31 @@
+@import './fonts/fonts.scss';
+@import './components/nav.scss';
+@import './components/home.scss';
+@import './components/forms.scss';
+@import './components/profile.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+#root{
+  padding: 0 !important;
+}
+
+body {
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  min-height: 90vh;
+  background-color: #b1ff9c;
+}
+
+h1, h2, h3, h4, p {
+  font-family: 'SofiaProSoft';
+}

@@ -1,6 +1,7 @@
 import NavProfile from './NavProfile'
 import { useContext } from 'react'
 import { loginContext } from './LoginContext'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
 
@@ -9,10 +10,10 @@ export default function Navbar() {
 
   return (
     <header>
-      <a href='#'>Home</a>
-      <nav><h3>Nav</h3></nav>
-      <div className='login'>
-        <h3>Login</h3>
+      <div className="nav-profile">
+        <img src='../src/assets/images/logo.jpeg' />
+        <Link to={`/`}><button type="button" className="btn btn-info">Home</button></Link>
+        <Link to={`/boardgames/`}><button type="button" className="btn btn-info">Board Game Library</button></Link>
       </div>
       <NavProfile />
     </header>

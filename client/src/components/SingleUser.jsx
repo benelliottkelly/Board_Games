@@ -32,12 +32,12 @@ export default function SingleUser() {
 
   return (
     <>
-      { view === true && <button onClick={logOut}>Logout</button> }
-      <h1>User: {username}</h1>
-      <img src={image}/>
-      { {first_name} ? <h4>{first_name} {last_name}</h4> : null}
-      { view === true && <h4>{email}</h4> }
-      <p>{bio}</p>
+      <section className="profile-info">
+        <h1>Profile: {username}</h1>
+        <img className="profile-image-main" src={image}/>
+        { {first_name} ? <h4>{first_name} {last_name}</h4> : null}
+        { view === true && <h4>{email}</h4> }
+        <p>{bio}</p>
       <div>
         <h4>Owned Games:</h4>
         {/* Add in button to add more games */}
@@ -66,6 +66,7 @@ export default function SingleUser() {
           <p>{username} has not made any reviews yet</p>
         }
       </div>
+      </section>
     </>
   )
 }

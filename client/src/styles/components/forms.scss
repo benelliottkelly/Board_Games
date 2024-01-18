@@ -1,0 +1,43 @@
+.form-container {
+  position: absolute;
+  @include flex-center(column);
+  margin: 1em auto;
+  background-color: rgba(255, 255, 255, 0.5 );
+  border: solid 2px var(--var-green-border);
+  border-radius: 5px;
+  min-width: 300px;
+  padding: 1em;
+  h1 {
+    color: var(--var-font-colour);
+    font-size: 4em;
+  }
+  .form {
+    @include flex-center(column);
+    input {
+      font-size: 1em;
+      margin-bottom: 1.5em;
+    }
+    button {
+      font-size: 1.5em;
+      margin-bottom: 1.5em;
+    }
+    .image-upload-container {
+      position: relative;
+      margin-bottom: 1.5em;
+      button {
+        position: absolute;
+        right: 0;
+      }
+      img {
+        max-width: 10em;
+        border: solid 2px rgba(0, 0, 0, 0.5 )
+      }
+    }
+    textarea {
+      width: 300px;
+      margin-bottom: 1.5em;
+    }
+  }
+}
+
+@media (min-width: 375px) { }

@@ -1,0 +1,24 @@
+:root {
+  --var-font-colour: #4b0081;
+  --var-green-border: #155600c4;
+}
+
+@mixin flex-center($direction){
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between($direction){
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin background-image($size){
+  background-size: $size;
+  background-position: center;
+  background-repeat: no-repeat;
+}

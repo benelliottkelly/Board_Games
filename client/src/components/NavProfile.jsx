@@ -46,16 +46,15 @@ export default function NavProfile(){
 
   return(
     <>
-      <button onClick={testFunction}>TEST</button>
-      { loggedIn === true && profileData ? <div>
-        <img src={profileData.image} alt={`${profileData.username}'s profile picture`}/>
-        <Link to={`/users/${profileData.pk}/`}>{profileData.username}</Link>
-        <button onClick={logOut}>Logout</button>
+      { loggedIn === true && profileData ? <div className="nav-profile">
+        <Link className="image-link-to-profile" to={`/users/${profileData.pk}/`}><img src={profileData.image} alt={`${profileData.username}'s profile picture`} /></Link>
+        <Link className="profile-link" to={`/users/${profileData.pk}/`}><button type="button" className="btn btn-info">Profile</button></Link>
+        <button type="button" className="btn btn-danger" onClick={logOut}>Logout</button>
       </div>
       :
-      <div>
-        <Link to='/register/'><button>Register</button></Link>
-        <Link to='/login/'><button>Login</button></Link>
+      <div className="nav-profile">
+        <Link to='/register/'><button type="button" className="btn btn-warning">Register</button></Link>
+        <Link to='/login/'><button type="button" className="btn btn-info" >Login</button></Link>
       </div>
       }
     </>

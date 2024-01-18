@@ -1,0 +1,11 @@
+.profile-info {
+  width: 100vw;
+  padding: 1em;
+  h1 {
+    color: var(--var-font-colour);
+  }
+  .profile-image-main {
+    border: solid 5px var(--var-green-border);
+    border-radius: 10px;
+  } 
+}
