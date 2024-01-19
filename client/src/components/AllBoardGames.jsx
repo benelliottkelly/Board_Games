@@ -39,7 +39,8 @@ export default function AllBoardGames() {
         show={showModal}
         fullscreen={true}
         onHide={() => setShowModal(false)}
-        centered >
+        centered 
+        className='add-game-modal'>
         <Modal.Header closeButton>
           <Modal.Title>Add Board Game</Modal.Title>
         </Modal.Header>

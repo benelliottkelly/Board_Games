@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Form, useActionData, useNavigate } from 'react-router-dom'
+import { Form, useActionData, useNavigate, Link } from 'react-router-dom'
 import ImageUploadField from './ImageUploadField'
 
 export default function Register() {
@@ -41,8 +41,9 @@ export default function Register() {
           <ImageUploadField setFormData={setFormData} formData={formData}/> {/* This line needs to change the hidden line below */}
           <input type='hidden' name='image' value={formData.image ? formData.image : 'https://res.cloudinary.com/dqk3feale/image/upload/v1705318511/board-games/meeple_cblty1.jpg'}/>
           <textarea type="text-area" rows="5" cols="50" name='bio' placeholder='Bio' onChange={handleChange} value={formData.bio} />
-          <button type="submit">Register</button>
+          <button className='btn form-button' type="submit">Register</button>
           {res && <p className='danger'>{res.status}: {res.statusText}</p>}
+          <p>Already registered? Click to <Link to='/login/'>Login</Link> instead.</p>
         </Form>
       </section>
     </>

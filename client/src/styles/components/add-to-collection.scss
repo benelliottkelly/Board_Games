@@ -1,0 +1,43 @@
+@import '../global/variables.scss';
+
+.add-to-collection-container {
+  @include flex-start(column);
+  min-width: 350px;
+  max-width: 1100px;
+  width: 90vw;
+  h2 {
+    @include text-container();
+    margin: 1em;
+    padding: 0.5em;
+    color: var(--var-font-colour);
+    font-size: 2em;
+  }
+  .large-game-image {
+    width: 100%;
+    border: solid 2px var(--var-dark-purple-color);
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  }
+  .quantity-form {
+    @include flex-center(column);
+    margin-top: 2em;
+    input {
+      font-size: 1.5em;
+      width: 80%;
+      padding: 0.5em;
+      margin-bottom: 1.5em;
+      border-radius: 5px;
+      box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .add-to-collection-container {
+  .quantity-form {
+    margin-top: 0.5em;
+      input {
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}

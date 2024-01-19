@@ -1,3 +1,5 @@
+@import '../global/variables.scss';
+
 .form-container {
   position: absolute;
   @include flex-center(column);
@@ -7,6 +9,7 @@
   border-radius: 5px;
   min-width: 300px;
   padding: 1em;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
   h1 {
     color: var(--var-font-colour);
     font-size: 4em;
@@ -16,10 +19,12 @@
     input {
       font-size: 1em;
       margin-bottom: 1.5em;
+      border-radius: 5px;
     }
-    button {
-      font-size: 1.5em;
+    .basic-multi-select {
       margin-bottom: 1.5em;
+      border-radius: 5px;
+      width: 100%;
     }
     .image-upload-container {
       position: relative;
@@ -30,14 +35,120 @@
       }
       img {
         max-width: 10em;
-        border: solid 2px rgba(0, 0, 0, 0.5 )
+        border: solid 2px rgba(0, 0, 0, 0.5 );
+        border-radius: 5px;
       }
     }
     textarea {
       width: 300px;
       margin-bottom: 1.5em;
+      border-radius: 5px;
     }
   }
 }
 
-@media (min-width: 375px) { }
+.form-button {
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+  border-radius: 5px;
+  --bs-btn-color: #ffffff !important;
+  --bs-btn-bg: var(--var-orange-color) !important;
+  --bs-btn-border-color: #132647;
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: #c8713c;
+  --bs-btn-hover-border-color: #060d18;
+  --bs-btn-focus-shadow-rgb: 217, 164, 6;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+// Extra small devices (Smartphones)
+// @media (min-width: 375px) {
+
+// }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .form-container {
+    margin: 2em auto;
+    width: 80vw;
+    padding: 2em;
+    // h1 {
+    //   color: var(--var-font-colour);
+    //   font-size: 4em;
+    // }
+    .form {
+      input {
+        font-size: 1.5em;
+        margin-bottom: 2em;
+        padding: 0.5em;
+      }
+      .basic-multi-select {
+        margin-bottom: 1.5em;
+        width: 90%;
+        padding: 0.5em;
+        font-size: 1.5em;
+      }
+      .image-upload-input {
+        font-size: 1.2em;
+        text-align: center;
+      }
+      .image-upload-container {
+        position: relative;
+        margin-bottom: 1.5em;
+        button {
+          position: absolute;
+          right: 0;
+        }
+        img {
+          max-width: 400px;
+          max-height: 300px;
+          border: solid 2px rgba(0, 0, 0, 0.5 );
+          border-radius: 5px;
+        }
+      }
+      textarea {
+        width: 90%;
+        font-size: 1.5em;
+      }
+      .form-button {
+        font-size: 2em;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) { 
+
+// }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .form-container {
+    max-width: 800px;
+    .form {
+      textarea {
+        width: 100%;
+        font-size: 1.5em;
+      }
+      .form-button {
+        font-size: 2em;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { 
+
+//  }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .form-container {
+    align-self: flex-start;
+    margin-left: 5em;
+  }
+}

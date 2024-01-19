@@ -1,21 +1,38 @@
 @import '../global/variables.scss';
 
 header{
-  @include flex-center(column);
+  @include flex-between(row);
   flex-wrap: wrap;
   width: 100vw;
   min-width: 375px;
   min-height: 100px;
   padding: 10px;
   background-color: #325A8B;
+  .button-link-to-hide {
+    display: none;
+  }
   button {
+    padding: 0px !important;
+    text-align: center;
     margin: 0.5em;
-    width: 10em;
+    width: 4em;
     height: 4em;
     font-family: 'SofiaProSoft' !important;
   }
-  img{
-    display: none;
+  .nav-picture-links {
+    border-radius: 10px;
+    height: 4em;
+    width: 4em;
+    margin: 5px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+  .nav-picture-links:hover, button:hover {
+    border: solid 1px white !important;
+    box-shadow: 0 0 2em 0.2em hsl(186 100% 69%);
   }
   Link {
     text-decoration: none;

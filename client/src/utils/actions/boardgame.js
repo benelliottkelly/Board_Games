@@ -49,3 +49,15 @@ export async function addBoardGameToCollection(request){
     }
   })
 }
+
+export async function editBoardGameInCollection(request){
+  const data = request
+  data.quantity = parseInt(data.quantity)
+  console.log(data)
+  return await axios.patch(`/api/gamesowned/`, data, {
+    validateStatus: () => true,
+    headers: {
+      Authorization: `Bearer ${getToken()}`
+    }
+  })
+}

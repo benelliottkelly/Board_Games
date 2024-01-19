@@ -15,7 +15,7 @@ export default function CreateBoardGame() {
   const { boardgames, genres } = loadedData
 
   // States
-  const [ formData, setFormData ] = useState({
+  const [formData, setFormData] = useState({
     created_by: '',
     title: '',
     year: '',
@@ -25,14 +25,14 @@ export default function CreateBoardGame() {
     description: ''
   })
 
-  const [ userPK, setUserPK ] = useState()
+  const [userPK, setUserPK] = useState()
 
   // Functions
-  function handleChange(e){
+  function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  function handleArrayChange(e){
+  function handleArrayChange(e) {
     let arr = []
     e.forEach((item) => {
       arr.push(item.value)
@@ -46,36 +46,40 @@ export default function CreateBoardGame() {
   }, [])
 
   useEffect(() => {
-    setFormData({ ...formData, created_by: userPK})
+    setFormData({ ...formData, created_by: userPK })
   }, [userPK])
 
   return (
     <>
-      { userPK
+      {userPK
         ?
-        <Form className='form' id='register-form' method='POST'>
-          <input type='hidden' name='created_by' value={formData.created_by}/>
-          <input type="text" name="title" placeholder='Title' required onChange={handleChange} value={formData.title} />
-          <input type="number" min='100' name="year" placeholder='Year published' required onChange={handleChange} value={formData.year} />
-          <input type="text" name="publisher" placeholder='Publisher' required onChange={handleChange} value={formData.publisher} />
-            <Select
-            defaultValue={[]}
-            isMulti
-            name="genre"
-            options={genres.length > 0 && genres.map((item) => {
-              return { value: item.id, label: item.name }
-            })}
-            className="basic-multi-select"
-            classNamePrefix="select"
-            onChange={handleArrayChange}
-          />
-          <input type='hidden' name='genre' value={formData.genre}/>
-          <ImageUploadField setFormData={setFormData} formData={formData}/> 
-          <input type='hidden' name='image' value={formData.image}/>
-          <textarea type="text-area" rows="5" cols="50" name='description' placeholder='Description' onChange={handleChange} value={formData.description} />
-          <button type="submit">Add Game</button>
-          {res?.status > 399 && <p>{res.status}: {res.statusText}</p>}
-        </Form>
+        <>
+          <section className='form-container'>
+            <Form className='form' id='register-form' method='POST'>
+              <input type='hidden' name='created_by' value={formData.created_by} />
+              <input type="text" name="title" placeholder='Title' required onChange={handleChange} value={formData.title} />
+              <input type="number" min='100' name="year" placeholder='Year published' required onChange={handleChange} value={formData.year} />
+              <input type="text" name="publisher" placeholder='Publisher' required onChange={handleChange} value={formData.publisher} />
+              <Select
+                defaultValue={[]}
+                isMulti
+                name="genre"
+                options={genres.length > 0 && genres.map((item) => {
+                  return { value: item.id, label: item.name }
+                })}
+                className="basic-multi-select"
+                classNamePrefix="select"
+                onChange={handleArrayChange}
+              />
+              <input type='hidden' name='genre' value={formData.genre} />
+              <ImageUploadField setFormData={setFormData} formData={formData} />
+              <input type='hidden' name='image' value={formData.image} />
+              <textarea type="text-area" rows="5" cols="50" name='description' placeholder='Description' onChange={handleChange} value={formData.description} />
+              <button className='btn form-button' type="submit">Add Game</button>
+              {res?.status > 399 && <p>{res.status}: {res.statusText}</p>}
+            </Form>
+          </section>
+        </>
         :
         <Link to={`/login/`}>Login to add a new board game</Link>
       }

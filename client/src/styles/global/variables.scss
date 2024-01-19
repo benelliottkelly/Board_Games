@@ -1,6 +1,9 @@
 :root {
-  --var-font-colour: #4b0081;
+  --var-font-colour: #51365F;
+  --var-dark-purple-color: #533960;
   --var-green-border: #155600c4;
+  --var-green-color: #2F9774;
+  --var-orange-color: #C8623C;
 }
 
 @mixin flex-center($direction){
@@ -33,5 +36,6 @@
 @mixin text-container(){
   background-color: rgba(255, 255, 255, 0.5 );
   border: solid 2px var(--var-green-border);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
   padding: 1em;
 }

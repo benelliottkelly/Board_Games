@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { loginOrProfile, removeToken } from "../utils/helpers/common"
 import { singleUserLoader } from "../utils/loaders"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useContext } from 'react'
 import { loginContext } from './LoginContext'
 
@@ -12,6 +12,8 @@ export default function NavProfile(){
   const { loggedIn, setLoggedIn } = useContext(loginContext)
   const [ userPK, setUserPK ] = useState()
   const [ profileData, setProfileData ] = useState()
+
+  const navigate = useNavigate()
   
   // Check if user is logged in and match user to profile
   useEffect(() => {
@@ -38,6 +40,7 @@ export default function NavProfile(){
     removeToken()
     setLoggedIn(false)
     console.log('Logged Out')
+    navigate(`/login/`)
   }
 
   function testFunction(){
@@ -47,8 +50,7 @@ export default function NavProfile(){
   return(
     <>
       { loggedIn === true && profileData ? <div className="nav-profile">
-        <Link className="image-link-to-profile" to={`/users/${profileData.pk}/`}><img src={profileData.image} alt={`${profileData.username}'s profile picture`} /></Link>
-        <Link className="profile-link" to={`/users/${profileData.pk}/`}><button type="button" className="btn btn-info">Profile</button></Link>
+        <Link className='nav-picture-links' to={`/users/${profileData.pk}/`}><img src={profileData.image} alt={`${profileData.username}'s profile picture`} /></Link>
         <button type="button" className="btn btn-danger" onClick={logOut}>Logout</button>
       </div>
       :

@@ -1,4 +1,5 @@
 @import './fonts/fonts.scss';
+@import './global/variables.scss';
 @import './components/nav.scss';
 @import './components/home.scss';
 @import './components/forms.scss';
@@ -6,6 +7,7 @@
 @import './components/loading-screen.scss';
 @import './components/board-games-index.scss';
 @import './components/add-game.scss';
+@import './components/add-to-collection.scss';
 
 * {
   box-sizing: border-box;
@@ -26,7 +28,8 @@ main {
   justify-content: center;
   margin: 0;
   min-height: 90vh;
-  background-color: #b1ff9c;
+  // background-color: #b1ff9c;
+  background-color: var(--var-green-color);
 }
 
 h1, h2, h3, h4, p {

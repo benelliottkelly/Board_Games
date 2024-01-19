@@ -26,11 +26,11 @@ export default function ImageUploadField({ formData, setFormData }) {
     <>
       {formData.image ?
         <div className="image-upload-container">
-          <button onClick={handleClearImage}>❌</button>
+          <button className="image-clear-button" onClick={handleClearImage}>❌</button>
           <img className="uploading-image" src={formData.image} alt='Uploaded image'/>
         </div>
         :
-        <input type='file' name='image' onChange={handleImageUpload}/>
+        <input type='file' className='image-upload-input' name='image' onChange={handleImageUpload}/>
       }
     </>
   )
