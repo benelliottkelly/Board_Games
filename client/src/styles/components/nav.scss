@@ -7,7 +7,7 @@ header{
   min-width: 375px;
   min-height: 100px;
   padding: 10px;
-  background-color: #325A8B;
+  background-color: var(--var-dark-color);
   .button-link-to-hide {
     display: none;
   }
@@ -52,36 +52,43 @@ header{
 // Larger than a standard mobile phone (landscape phones, 576px and up)
 @media (min-width: 375px) { 
   header {
-    @include flex-between(row);
-    height: 100px;
-    padding: 5px;
-    background-color: #325A8B;
+    height: 150px;
     button {
       margin: 0.5em;
-    }
-    img{
-      display: inline-block;
-      height: 90%;
-      border: solid 2px #FAFCE6;
-      border-radius: 10px;
-    }
-    Link {
-      text-decoration: none;
+      width: 4.5em;
+      height: 4em;
+      font-size: 1.1em !important;
     }
     .nav-profile {
-      @include flex-between(row);
-      height: 100%;
-      min-width: 100px;
-      .profile-link {
-        display: none;
-      }
-      .image-link-to-profile {
-        height: 100%;
-        @include flex-center(row);
-        img {
-          display: inline-block;
-        }
-      }
+      padding: 0px;
     }
   }
  }
+
+ @media (min-width: 576px) { 
+  header{
+    button {
+      width: 5em;
+      height: 3em;
+      font-size: 1.5em !important;
+    }
+    .nav-picture-links {
+      height: 6em;
+      width: 6em;
+      margin: 1em;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  header{
+    button {
+      width: 6em;
+      margin: 1em;
+    }
+    .nav-picture-links {
+      margin: 1.5em;
+    }
+  }
+}

@@ -6,12 +6,13 @@
   h3 {
     color: var(--var-font-colour);
     font-size: 2em;
+    animation: glow-flicker 2s linear infinite;
   }
   .wavey {
     @include flex-center(row);
     flex-wrap: wrap;
     position: relative;
-    width: 360px;
+    min-width: 360px;
     -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
     h1 {
       font-size: 40px;
@@ -22,6 +23,7 @@
       text-transform: uppercase;
       animation: wavey 2.5s infinite;
       animation-delay: calc(.1s * var(--i));
+      text-align: center;
     }
   }
 }
@@ -32,5 +34,67 @@
   }
   20% {
     transform: translateY(-20px)
+  }
+}
+
+@keyframes glow-flicker{
+  0% {
+    text-shadow: 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1);
+  }
+  50% {
+    text-shadow: 1px 1px 5px rgba(199, 36, 177, 0), 1px 1px 5px rgba(199, 36, 177, 0), 1px 1px 5px rgba(199, 36, 177, 0), 1px 1px 5px rgba(199, 36, 177, 0);
+  }
+  100% {
+    text-shadow: 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1);
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+  .hero {
+      width: 90vw;
+      h3 {
+        font-size: 3em;
+      }
+    }
+  }
+
+
+
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .hero {
+    h3 {
+      font-size: 4em;
+      margin: 1em;
+    }
+    .wavey {
+      h1 {
+        font-size: 4em;
+      }
+    }
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { 
+
+//  }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .hero {
+    .wavey{
+      h1 {
+        font-size: 6em;
+        min-width: 35px;
+      }
+    }
   }
 }
