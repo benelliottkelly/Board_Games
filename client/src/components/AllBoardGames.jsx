@@ -7,8 +7,6 @@ import { v4 as uuidv4 } from 'uuid'
 // Bootstrap Components
 import Modal from 'react-bootstrap/Modal'
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
 export default function AllBoardGames() {
 
@@ -50,30 +48,33 @@ export default function AllBoardGames() {
         </Modal.Body>
       </Modal>
       <h1>Board Game Library</h1>
-      <button onClick={() => setShowModal(true)}>Add Board Game</button>
-      <Container >
-        <Col >
-          
-        </Col>
-        {boardgames.length > 0 &&
-          boardgames.map((obj) => {
-            return (
-              <>
-                <div className='board-game-list-container'>
-                  <button value={obj.id} onClick={addGameToCollection}>+</button>
-                  <Link className='game-link' to={`/boardgames/${obj.id}/`} key={uuidv4()}>
-                    <div className='single-game' style={{ backgroundImage: `url("${obj.image}")` }}>
-                      <h3>{obj.title}</h3>
-                      <h4>{obj.year}</h4>
+      <article className='library-info'>
+        <p>Welcome to the board game library.</p>
+        <p>To add a game to the library click <button onClick={() => setShowModal(true)} className='btn btn-add-game'>Add Game</button>.</p>
+        <p>To add an existing game to your collection click the <span id='add-explainer'>+</span> button and input how many boxes of the game you own.</p>
+        <p>Or to view the game in greater detail click on the box itself.</p>
+      </article>
+      <div className='bookshelf-outer'>
+        <Container className='bookshelf'>
+            {boardgames.length > 0 &&
+              boardgames.map((obj) => {
+                return (
+                    <div className='board-game-list-container'>
+                      <div className='inner-walls'>
+                          <button className='add-to-collection-button' value={obj.id} onClick={addGameToCollection}>+</button>
+                        <div className='back-wall' >
+                          <Link className='game-link' to={`/boardgames/${obj.id}/`} key={uuidv4()}>
+                            <div className='single-game' style={{ backgroundImage: `url("${obj.image}")` }}>
+                              <h3>{obj.title}</h3>
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
                     </div>
-                  </Link>
-                  <div className="shelf"></div>
-                </div>
-              </>
-            )
-          })}
-
-      </Container>
+                )
+              })}
+        </Container>
+      </div>
     </section>
   )
 }
