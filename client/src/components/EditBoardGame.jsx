@@ -10,7 +10,6 @@ import { editBoardGame } from '../utils/actions/boardgame'
 export default function EditBoardGame() {
 
   const loadedData = useLoaderData()
-  // const res = useActionData()
   const navigate = useNavigate()
 
   const { boardGame, genres } = loadedData

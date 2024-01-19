@@ -1,0 +1,48 @@
+.board-game-library {
+  color: var(--var-font-colour);
+
+  .board-game-list-container {
+    position: relative;
+
+  }
+  .single-game {
+    padding: 15px 0 0 0;
+    margin: auto;
+    position: relative;
+  }
+  .game-link {
+    position: relative;
+  }
+  .single-game::before {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 1em;
+    background: rgba(0,0,0,.35);
+    border-radius: 50%;
+    position: absolute;
+    bottom:-30px;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    z-index: 0;
+  }
+  .shelf {
+    border-bottom: 30px solid #D8B589;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    top: -15px;
+    z-index: -10;
+  }
+  .shelf::after {
+    content: '';
+    background: #bb8c52;
+    height: 20px;
+    width: calc(100%); /*IE9+*/
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin: 0 0px;
+  }
+}

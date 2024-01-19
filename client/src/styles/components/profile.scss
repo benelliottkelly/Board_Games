@@ -1,6 +1,8 @@
 .profile-info {
+  @include flex-start(column);
   width: 100vw;
   padding: 1em;
+  color: var(--var-font-colour);
   h1 {
     color: var(--var-font-colour);
   }
@@ -8,4 +10,17 @@
     border: solid 5px var(--var-green-border);
     border-radius: 10px;
   } 
+}
+
+.owned-games-container, .reviews-made-container {
+  @include flex-center(column);
+  background-color: rgba(255, 255, 255, 0.5 );
+  border: solid 2px var(--var-green-border);
+  border-radius: 5px;
+  padding: 1em;
+  min-width: 330px;
+  margin: 0.5em;
+  h4 {
+    display: inline-block;
+  }
 }

@@ -4,14 +4,16 @@ from .serializers.populated import PopulatedGameOwnedSerializer
 from lib.views import OwnerListCreateView
 from lib.permissions import IsOwnerOrReadOnly
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from rest_framework.generics import RetrieveUpdateDestroyAPIView
+from rest_framework.generics import RetrieveUpdateDestroyAPIView, ListCreateAPIView
 
 # Path: /gamesowned
 # Methods: GET, POST
-class GameOwnedListCreateView(OwnerListCreateView):
+class GameOwnedListCreateView(ListCreateAPIView):
   queryset = GameOwned.objects.all()
   serializer_class = GameOwnedSerializer
   permission_classes = [IsOwnerOrReadOnly]
+
+
 
 # Path: /gamesowned/:pk
 # Methods: GET, PUT, PATCH, DELETE

@@ -23,6 +23,7 @@ import AllGenres from './components/AllGenres.jsx'
 import CreateGenre from './components/CreateGenre.jsx'
 import SingleGenre from './components/SingleGenre.jsx'
 import EditGenre from './components/EditGenre.jsx'
+import AddToCollection from './components/AddToCollection.jsx'
 
 // Loaders
 import { boardGamesLoader, singleBoardGameLoader, singleUserLoader, genresLoader, singleGenreLoader } from './utils/loaders.js'
@@ -77,6 +78,11 @@ const router = createBrowserRouter([
         path: '/boardgames/:boardgamepk/edit',
         element: <EditBoardGame />,
         action: async ({ request, params }) => editBoardGame(request, params.boardgamepk),
+        loader: async ({ params }) => singleBoardGameLoader(params.boardgamepk)
+      },
+      {
+        path: 'boardgames/:boardgamepk/collect',
+        element: <AddToCollection />,
         loader: async ({ params }) => singleBoardGameLoader(params.boardgamepk)
       },
       {

@@ -37,3 +37,15 @@ export async function deleteBoardGame(pk){
   })
   return redirect('/api/boardgames')
 }
+
+export async function addBoardGameToCollection(request){
+  const data = request
+  data.quantity = parseInt(data.quantity)
+  console.log(data)
+  return await axios.post(`/api/gamesowned/`, data, {
+    validateStatus: () => true,
+    headers: {
+      Authorization: `Bearer ${getToken()}`
+    }
+  })
+}
