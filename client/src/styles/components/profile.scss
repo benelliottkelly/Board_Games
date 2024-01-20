@@ -3,31 +3,35 @@
   width: 100vw;
   padding: 1em;
   color: var(--var-font-colour);
+  .information-container {
+    @include flex-start(column);
+  }
   h1 {
     color: var(--var-font-colour);
     padding: 1em;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   }
   .profile-image-main {
     border: solid 5px var(--var-green-border);
     border-radius: 10px;
     width: 300px;
     max-width: 500px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   } 
-  .special-characters {
-    font-family: "Gill Sans", sans-serif;
-  }
   h4 {
     font-size: 1.5em;
     padding: 0.5em;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   }
   .bio {
     @include text-container();
     font-size: 1.2em;
     min-width: 350px;
+    max-width: 600px;
   }
 }
 
-.owned-games-container, .reviews-made-container {
+.owned-games-container, .reviews-made-container, .owned-by-container {
   @include flex-center(column);
   background-color: rgba(255, 255, 255, 0.5 );
   border: solid 2px var(--var-green-border);
@@ -39,19 +43,64 @@
   .carousel {
     @include flex-center(row);
     flex-wrap: wrap;
+    border-top: solid 5px rgba(0, 0, 0, 0.2);
   }
   h4 {
     display: inline-block;
   }
   .details-container {
     @include flex-center(column);
+    padding: 0.5em;
     img {
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
       width: 90%;
+      max-width: 500px;
+      max-height: 500px;
     }
+  }
+  h3 {
+    font-size: 2em;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+  p{
+    font-size: 1.5em;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
-
+  .owned-games-container, .reviews-made-container, .owned-by-container {
+    width: 80%;
+    .carousel {
+      justify-content: space-evenly;
+    }
   }
+  }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .profile-info {
+    .information-container {
+      @include flex-start(row);
+    }
+    h1 {
+      color: var(--var-font-colour);
+      font-size: 4em;
+      padding: 0.5em;
+    }
+    .profile-image-main {
+      margin: 1em;
+    } 
+    h3 {
+      font-size: 3.5em;
+    }
+    h4 {
+      font-size: 2em;
+      padding: 0.1em;
+    }
+    .bio {
+      font-size: 1.5em;
+      margin: 0px 1em;
+    }
+  }
+}

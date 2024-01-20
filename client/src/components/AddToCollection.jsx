@@ -20,6 +20,11 @@ export default function AddToCollection() {
   const [ res, setRes ] = useState(0)
 
   // Functions
+  function scrollUp() {
+    document.documentElement.scrollTop = 0
+  }
+  scrollUp()
+
   useEffect(() => {
     const userMatch = loginOrProfile()
     setUserPK(userMatch)

@@ -3,8 +3,6 @@ import { loginOrProfile } from '../utils/helpers/common'
 import { Form, Link, useActionData, useLoaderData, useNavigate } from 'react-router-dom'
 import ImageUploadField from './ImageUploadField'
 import Select from 'react-select'
-import { genresLoader } from '../utils/loaders'
-import { v4 as uuidv4 } from 'uuid'
 
 export default function CreateBoardGame() {
   // Loaders
@@ -28,6 +26,11 @@ export default function CreateBoardGame() {
   const [userPK, setUserPK] = useState()
 
   // Functions
+  function scrollUp() {
+    document.documentElement.scrollTop = 0
+  }
+  scrollUp()
+
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
@@ -53,9 +56,9 @@ export default function CreateBoardGame() {
     <>
       {userPK
         ?
-        <>
+        <section>
           <section className='form-container'>
-            <Form className='form' id='register-form' method='POST'>
+            <Form className='form' method='POST'>
               <input type='hidden' name='created_by' value={formData.created_by} />
               <input type="text" name="title" placeholder='Title' required onChange={handleChange} value={formData.title} />
               <input type="number" min='100' name="year" placeholder='Year published' required onChange={handleChange} value={formData.year} />
@@ -79,7 +82,7 @@ export default function CreateBoardGame() {
               {res?.status > 399 && <p>{res.status}: {res.statusText}</p>}
             </Form>
           </section>
-        </>
+        </section>
         :
         <Link to={`/login/`}>Login to add a new board game</Link>
       }

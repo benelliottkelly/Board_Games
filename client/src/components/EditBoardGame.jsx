@@ -1,5 +1,5 @@
 import { React } from 'react'
-import { useActionData, useLoaderData, Form, useNavigate } from 'react-router-dom'
+import { useLoaderData, Form, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { loginOrProfile } from '../utils/helpers/common'
@@ -23,6 +23,11 @@ export default function EditBoardGame() {
   })
 
   // Functions
+  function scrollUp() {
+    document.documentElement.scrollTop = 0
+  }
+  scrollUp()
+  
   useEffect(() => {
     const userMatch = loginOrProfile()
     setUserPK(userMatch)
@@ -61,29 +66,31 @@ export default function EditBoardGame() {
       <h1>Edit {title}</h1>
       { userPK === created_by.pk
         ?
-        <Form onSubmit={handleSubmit} className='form' id='register-form' method='PATCH'>
-          <input type='hidden' name='created_by' value={created_by.pk}/>
-          <input type="text" name="title" placeholder='Title' onChange={handleChange} value={formData.title} />
-          <input type="number" min='100' name="year" placeholder='Year published' onChange={handleChange} value={formData.year} />
-          <input type="text" name="publisher" placeholder='Publisher' onChange={handleChange} value={formData.publisher} />
-          <Select
-            defaultValue={[]}
-            isMulti
-            name="genre"
-            options={genres.length > 0 && genres.map((item) => {
-              return { value: item.id, label: item.name }
-            })}
-            className="basic-multi-select"
-            classNamePrefix="select"
-            onChange={handleArrayChange}
-          />
-          <input type='hidden' name='genre' value={formData.genre}/>
-          <ImageUploadField setFormData={setFormData} formData={formData}/> 
-          <input type='hidden' name='image' value={formData.image}/>
-          <input type="text" name='description' placeholder='Description' value={formData.image}/>
-          <button type="submit" >Confirm Changes</button>
-          {res && <p className='danger'>{res.status}: {res.statusText}</p>}
-        </Form>
+        <section className='form-container'>
+          <Form onSubmit={handleSubmit} className='form' method='PATCH'>
+            <input type='hidden' name='created_by' value={created_by.pk}/>
+            <input type="text" name="title" placeholder='Title' onChange={handleChange} value={formData.title} />
+            <input type="number" min='100' name="year" placeholder='Year published' onChange={handleChange} value={formData.year} />
+            <input type="text" name="publisher" placeholder='Publisher' onChange={handleChange} value={formData.publisher} />
+            <Select
+              defaultValue={[]}
+              isMulti
+              name="genre"
+              options={genres.length > 0 && genres.map((item) => {
+                return { value: item.id, label: item.name }
+              })}
+              className="basic-multi-select"
+              classNamePrefix="select"
+              onChange={handleArrayChange}
+            />
+            <input type='hidden' name='genre' value={formData.genre}/>
+            <ImageUploadField setFormData={setFormData} formData={formData}/> 
+            <input type='hidden' name='image' value={formData.image}/>
+            <input type="text" name='description' placeholder='Description' value={formData.image}/>
+            <button type="submit" >Confirm Changes</button>
+            {res && <p className='danger'>{res.status}: {res.statusText}</p>}
+          </Form>
+        </section>
         :
         <Link to={`/login/`}>Login to add a new board game</Link>
       }

@@ -12,6 +12,12 @@ export default function Login() {
   // const [res, setRes] = useState()
   const { loggedIn, setLoggedIn } = useContext(loginContext)
 
+  // Functions
+  function scrollUp() {
+    document.documentElement.scrollTop = 0
+  }
+  scrollUp()
+  
   useEffect(() => {
     if(res?.status === 200) {
       console.log(res)

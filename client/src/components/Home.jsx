@@ -2,6 +2,12 @@ export default function Home() {
 
   const letters = ['T', 'h', 'e', " ", ' B', 'o', 'a', 'r', 'd', ' ', 'G', 'a', 'm', 'e', ' ', 'L', 'i', 'b', 'r', 'a', 'r', 'y' ]
 
+  // Functions
+  function scrollUp() {
+    document.documentElement.scrollTop = 0
+  }
+  scrollUp()
+  
   return (
     <>
       <section className="hero">

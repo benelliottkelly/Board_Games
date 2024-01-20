@@ -3,6 +3,7 @@ import { isUserActiveUser, removeToken } from "../utils/helpers/common"
 import { useActionData, useLoaderData } from "react-router-dom"
 import { useContext } from 'react'
 import { loginContext } from './LoginContext'
+import { v4 as uuidv4 } from 'uuid'
 
 
 export default function SingleUser() {
@@ -17,6 +18,13 @@ export default function SingleUser() {
   // States
   const [view, setView] = useState(false)
 
+  // Functions
+  function scrollUp() {
+    document.documentElement.scrollTop = 0
+  }
+  scrollUp()
+  
+
   // Checks if user is the owner of the page and changes display accordingly
   useEffect(() => {
     const userMatch = isUserActiveUser(pk)
@@ -26,18 +34,22 @@ export default function SingleUser() {
   return (
     <>
       <section className="profile-info">
-        <h1>Profile: {username}</h1>
-        <img className="profile-image-main" src={image} />
-        {{ first_name } ? <h4>{first_name} {last_name}</h4> : null}
-        {view === true && <h4 className="special-characters">{email}</h4>}
-        <p className="special-characters bio">{bio}</p>
+            <h1>Profile: {username}</h1>
+        <div className="information-container">
+          <div className='name-and-image'>
+            <img className="profile-image-main" src={image} />
+            {{ first_name } ? <h4>{first_name} {last_name}</h4> : null}
+            {view === true && <h4 className="special-characters">{email}</h4>}
+          </div>
+          <p className="special-characters bio">{bio}</p>
+        </div>
         <article className="owned-games-container">
-          <h4>Owned Games:</h4>
+          <h3>Owned Games:</h3>
           <div className="carousel">
             {/* Add in button to add more games */}
             {games.length > 0 ?
-              games.map((obj, idx) => {
-                return <div key={idx} className="details-container">
+              games.map((obj) => {
+                return <div key={uuidv4()} className="details-container">
                   <h4>{obj.game.title} <span className="special-characters">({obj.game.year})</span></h4>
                   <img src={obj.game.image} />
                   <h4>Quantity: {obj.quantity}</h4>
@@ -48,12 +60,12 @@ export default function SingleUser() {
             }
           </div>
         </article>
-        <article className="reviews-made-container">
-          <h4>Reviews Made:</h4>
-          <div className="carousel">
+        <article className='reviews-made-container'>
+          <h3>Reviews Made:</h3>
+          <div className='carousel'>
             {reviews.length > 0 ?
-              reviews.map((review, idx) => {
-                return <div key={idx} className='details-container' style={{ backgroundImage: `url("${review.board_game.image}")` }}>
+              reviews.map((review) => {
+                return <div key={uuidv4()} className='details-container' style={{ backgroundImage: `url("${review.board_game.image}")` }}>
                   <h4>{review.board_game.title} <span>({review.rating}/5)</span></h4>
                   <p>{review.title}</p>
                 </div>

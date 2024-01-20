@@ -18,6 +18,11 @@ export default function Register() {
   })
 
   // Functions
+  function scrollUp() {
+    document.documentElement.scrollTop = 0
+  }
+  scrollUp()
+  
   function handleChange(e){
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }

@@ -8,6 +8,7 @@
 @import './components/board-games-index.scss';
 @import './components/add-game.scss';
 @import './components/add-to-collection.scss';
+@import './components/single-game.scss';
 
 * {
   box-sizing: border-box;
@@ -34,4 +35,8 @@ main {
 
 h1, h2, h3, h4, p {
   font-family: 'SofiaProSoft';
+}
+
+.special-characters {
+  font-family: "Gill Sans", sans-serif;
 }

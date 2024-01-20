@@ -12,11 +12,6 @@
     color: var(--var-font-colour);
     font-size: 2em;
   }
-  .large-game-image {
-    width: 100%;
-    border: solid 2px var(--var-dark-purple-color);
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
-  }
   .quantity-form {
     @include flex-center(column);
     margin-top: 2em;
@@ -29,6 +24,11 @@
       box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
     }
   }
+}
+.large-game-image {
+  width: 100%;
+  border: solid 2px var(--var-dark-purple-color);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 992px) {

@@ -21,6 +21,11 @@ export default function AllBoardGames() {
   const [showModal, setShowModal] = useState(false)
 
   // Functions
+  function scrollUp() {
+    document.documentElement.scrollTop = 0
+  }
+  scrollUp()
+  
   useEffect(() => {
     console.log('res ->', res)
     if (res?.status === 201) {
