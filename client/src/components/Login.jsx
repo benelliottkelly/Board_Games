@@ -13,7 +13,6 @@ export default function Login() {
   const { loggedIn, setLoggedIn } = useContext(loginContext)
 
   useEffect(() => {
-    console.log('res = ', res)
     if(res?.status === 200) {
       console.log(res)
       setToken(res.data.access)

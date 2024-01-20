@@ -17,6 +17,7 @@ export default function AddToCollection() {
   const [ formData, setFormData ] = useState({
   })
   const [ userPK, setUserPK ] = useState()
+  const [ res, setRes ] = useState(0)
 
   // Functions
   useEffect(() => {
@@ -30,21 +31,29 @@ export default function AddToCollection() {
     console.log('formData -> ', formData)
   }
 
-  function handleSubmit(e) {
-    console.log('handlesubmit', formData)
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    addBoardGameToCollection(formData)
-
-    // * To be added, detect if user owns game already and edit ownership instead of adding a new one
-    // const listOfOwners = owned_by.map((owner) => owner.pk)
-    // console.log('list of owners ->', listOfOwners)
-    // const isOwner = listOfOwners.includes(userPK)
-    // console.log('is owner -> ', isOwner)
-    // if (isOwner === false) {
-    // } else {
-    // }
-    navigate(`/users/${userPK}`)
+    try {
+      const response = await addBoardGameToCollection(formData)
+      setRes(response)
+    } catch (error) {
+      console.log(error)
+    }
+      // * To be added, detect if user owns game already and edit ownership instead of adding a new one
+      // const listOfOwners = owned_by.map((owner) => owner.pk)
+      // console.log('list of owners ->', listOfOwners)
+      // const isOwner = listOfOwners.includes(userPK)
+      // console.log('is owner -> ', isOwner)
+      // if (isOwner === false) {
+      // } else {
+      // }
   }
+
+  useEffect(() => {
+    if(res?.status === 201) {
+      navigate(`/users/${userPK}`)
+    }
+  }, [res])
 
   return (
     <section className='add-to-collection-container'>

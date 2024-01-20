@@ -19,6 +19,7 @@ export default function SingleBoardGame() {
   // States
   const [userPK, setUserPK] = useState()
   const [showModal, setShowModal] = useState()
+  const [ res, setRes ] = useState(0)
 
   // Functions
   // function calculateStars(rating) {
@@ -44,10 +45,21 @@ export default function SingleBoardGame() {
     }
   }
 
-  function handleDelete(){
-    deleteBoardGame(id)
-    navigate(`/boardgames/`)
+  const handleDelete = async (e) => {
+    e.preventDefault()
+    try {
+      const response = await deleteBoardGame(id)
+      setRes(response)
+    } catch (error) {
+      console.log(error)
+    }
   }
+
+  useEffect(() => {
+    if(res?.status === 204) {
+      navigate(`/boardgames/`)
+    }
+  }, [res])
 
   return (
     <>

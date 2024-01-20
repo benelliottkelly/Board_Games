@@ -29,25 +29,27 @@ export async function editBoardGame(request, pk){
 }
 
 export async function deleteBoardGame(pk){
-  await axios.delete(`/api/boardgames/${pk}/`, {
+  const res = await axios.delete(`/api/boardgames/${pk}/`, {
     validateStatus: () => true,
     headers: {
       Authorization: `Bearer ${getToken()}`
     }
   })
-  return redirect('/api/boardgames')
+  return res
 }
 
 export async function addBoardGameToCollection(request){
   const data = request
   data.quantity = parseInt(data.quantity)
   console.log(data)
-  return await axios.post(`/api/gamesowned/`, data, {
+  const res = await axios.post(`/api/gamesowned/`, data, {
     validateStatus: () => true,
     headers: {
       Authorization: `Bearer ${getToken()}`
     }
   })
+  console.log('Res from add to collection', res)
+  return res
 }
 
 export async function editBoardGameInCollection(request){

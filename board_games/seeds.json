@@ -1,0 +1,218 @@
+[
+{
+  "model": "board_games.boardgame",
+  "pk": 1,
+  "fields": {
+    "title": "Brass Birmingham",
+    "publisher": "Roxley",
+    "year": 2018,
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705573875/board-games/uezuir73sczcd66qvzkx.jpg",
+    "description": "Brass: Birmingham is an economic strategy game sequel to Martin Wallace' 2007 masterpiece, Brass. Brass: Birmingham tells the story of competing entrepreneurs in Birmingham during the industrial revolution, between the years of 1770-1870.  It offers a very different story arc and experience from its predecessor. As in its predecessor, you must develop, build, and establish your industries and network, in an effort to exploit low or high market demands. The game is played over two halves: the canal era (years 1770-1830) and the rail era (years 1830-1870). To win the game, score the most VPs. VPs are counted at the end of each half for the canals, rails and established (flipped) industry tiles.  \r\nEach round, players take turns according to the turn order track, receiving two actions to perform any of the following actions (found in the original game):  \r\n\r\n1) Build - Pay required resources and place an industry tile. \r\n2) Network - Add a rail / canal link, expanding your network. \r\n3) Develop - Increase the VP value of an industry.\r\n4) Sell - Sell your cotton, manufactured goods and pottery. \r\n5) Loan - Take a £30 loan and reduce your income.  Brass: Birmingham also features a new sixth action:  6) Scout - Discard three cards and take a wild location and wild industry card. (This action replaces Double Action Build in original Brass.)",
+    "created_by": 1,
+    "date_added": "2024-01-18T10:32:15.968Z",
+    "last_edited": "2024-01-18T22:34:01.786Z",
+    "genre": [
+      12,
+      4
+    ]
+  }
+},
+{
+  "model": "board_games.boardgame",
+  "pk": 2,
+  "fields": {
+    "title": "Gloomhaven",
+    "publisher": "Cephalofair Games",
+    "year": 2017,
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705574180/board-games/jmcqbf3c8edrw1ajqto1.jpg",
+    "description": "Gloomhaven is a game of Euro-inspired tactical combat in a persistent world of shifting motives. Players will take on the role of a wandering adventurer with their own special set of skills and their own reasons for traveling to this dark corner of the world. Players must work together out of necessity to clear out menacing dungeons and forgotten ruins. In the process, they will enhance their abilities with experience and loot, discover new locations to explore and plunder, and expand an ever-branching story fueled by the decisions they make.  This is a game with a persistent and changing world that is ideally played over many game sessions. After a scenario, players will make decisions on what to do, which will determine how the story continues, kind of like a “Choose Your Own Adventure” book. Playing through a scenario is a cooperative affair where players will fight against automated monsters using an innovative card system to determine the order of play and what a player does on their turn.  Each turn, a player chooses two cards to play out of their hand. The number on the top card determines their initiative for the round. Each card also has a top and bottom power, and when it is a player’s turn in the initiative order, they determine whether to use the top power of one card and the bottom power of the other, or vice-versa. Players must be careful, though, because over time they will permanently lose cards from their hands. If they take too long to clear a dungeon, they may end up exhausted and be forced to retreat.",
+    "created_by": 1,
+    "date_added": "2024-01-18T10:36:48.814Z",
+    "last_edited": "2024-01-18T10:36:48.814Z",
+    "genre": [
+      12,
+      5
+    ]
+  }
+},
+{
+  "model": "board_games.boardgame",
+  "pk": 3,
+  "fields": {
+    "title": "Ark Nova",
+    "publisher": "Feuerland Spiele",
+    "year": 2021,
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705574326/board-games/dqjgnul9tapxo2yxbe6w.jpg",
+    "description": "In Ark Nova, you will plan and design a modern, scientifically managed zoo. With the ultimate goal of owning the most successful zoological establishment, you will build enclosures, accommodate animals, and support conservation projects all over the world. Specialists and unique buildings will help you in achieving this goal.  Each player has a set of five action cards to manage their gameplay, and the power of an action is determined by the slot the card currently occupies. The cards in question are:  CARDS: Allows you to gain new zoo cards (animals, sponsors, and conservation project cards). BUILD: Allows you to build standard or special enclosures, kiosks, and pavilions. ANIMALS: Allows you to accommodate animals in your zoo. ASSOCIATION: Allows your association workers to carry out different tasks. SPONSORS: Allows you to play a sponsor card in your zoo or to raise money. 255 cards featuring animals, specialists, special enclosures, and conservation projects, each with a special ability, are at the heart of Ark Nova. Use them to increase the appeal and scientific reputation of your zoo and collect conservation points.",
+    "created_by": 1,
+    "date_added": "2024-01-18T10:39:08.545Z",
+    "last_edited": "2024-01-18T10:39:08.545Z",
+    "genre": [
+      12
+    ]
+  }
+},
+{
+  "model": "board_games.boardgame",
+  "pk": 4,
+  "fields": {
+    "title": "Twilight Imperium: Fourth",
+    "publisher": "Fantasy Flight Games",
+    "year": 2017,
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705575131/board-games/ir9vg55j8ewnk78m8sbl.jpg",
+    "description": "Twilight Imperium (Fourth Edition) is a game of galactic conquest in which three to six players take on the role of one of seventeen factions vying for galactic domination through military might, political maneuvering, and economic bargaining. Every faction offers a completely different play experience, from the wormhole-hopping Ghosts of Creuss to the Emirates of Hacan, masters of trade and economics. These seventeen races are offered many paths to victory, but only one may sit upon the throne of Mecatol Rex as the new masters of the galaxy.  No two games of Twilight Imperium are ever identical. At the start of each galactic age, the game board is uniquely and strategically constructed using 51 galaxy tiles that feature everything from lush new planets and supernovas to asteroid fields and gravity rifts. Players are dealt a hand of these tiles and take turns creating the galaxy around Mecatol Rex, the capital planet seated in the center of the board. An ion storm may block your race from progressing through the galaxy while a fortuitously placed gravity rift may protect you from your closest foes. The galaxy is yours to both craft and dominate.  A round of Twilight Imperium begins with players selecting one of eight strategy cards that both determine player order and give their owner a unique strategic action for that round. These may do anything from providing additional command tokens to allowing a player to control trade throughout the galaxy. After these roles are selected, players take turns moving their fleets from system to system, claiming new planets for their empire, and engaging in warfare and trade with other factions. At the end of a turn, players gather in a grand council to pass new laws and agendas, shaking up the game in unpredictable ways.  After every player has passed their turn, players move up the victory track by checking to see whether they have completed any objectives throughout the turn and scoring them. Objectives are determined by setting up ten public objective cards at the start of each game, then gradually revealing them with every round. Every player also chooses between two random secret objectives at the start of the game, providing victory points achievable only by the holder of that objective. These objectives can be anything from researching new technologies to taking your neighbor's home system. At the end of every turn, a player can claim one public objective and one secret objective. As play continues, more of these objectives are revealed and more secret objectives are dealt out, giving players dynamically changing goals throughout the game. Play continues until a player reaches ten victory points.",
+    "created_by": 1,
+    "date_added": "2024-01-18T10:52:17.040Z",
+    "last_edited": "2024-01-18T10:52:17.040Z",
+    "genre": [
+      1,
+      12
+    ]
+  }
+},
+{
+  "model": "board_games.boardgame",
+  "pk": 5,
+  "fields": {
+    "title": "Terraforming Mars",
+    "publisher": "FryxGames",
+    "year": 2016,
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705575184/board-games/onc8qexe8m0o59wpni49.jpg",
+    "description": "In the 2400s, mankind begins to terraform the planet Mars. Giant corporations, sponsored by the World Government on Earth, initiate huge projects to raise the temperature, the oxygen level, and the ocean coverage until the environment is habitable. In Terraforming Mars, you play one of those corporations and work together in the terraforming process, but compete for getting victory points that are awarded not only for your contribution to the terraforming, but also for advancing human infrastructure throughout the solar system, and doing other commendable things.  The players acquire unique project cards (from over two hundred different ones) by buying them to their hand. The cards can give you immediate bonuses, as well as increasing your production of different resources. Many cards also have requirements and they become playable when the temperature, oxygen, or ocean coverage increases enough. Buying cards is costly, so there is a balance between buying cards and actually playing them. Standard Projects are always available to complement your cards. Your basic income, as well as your basic score, is based on your Terraform Rating. However, your income is complemented with your production, and you also get VPs from many other sources.  Each player keeps track of their production and resources on their player boards, and the game uses six types of resources: MegaCredits, Steel, Titanium, Plants, Energy, and Heat. On the game board, you compete for the best places for your city tiles, ocean tiles, and greenery tiles. You also compete for different Milestones and Awards worth many VPs. Each round is called a generation and consists of the following phases:  1) Player order shifts clockwise. 2) Research phase: All players buy cards from four privately drawn. 3) Action phase: Players take turns doing 1-2 actions from these options: Playing a card, claiming a Milestone, funding an Award, using a Standard project, converting plant into greenery tiles (and raising oxygen), converting heat into a temperature raise, and using the action of a card in play. The turn continues around the table (sometimes several laps) until all players have passed. 4) Production phase: Players get resources according to their terraform rating and production parameters.  When the three global parameters (temperature, oxygen, ocean) have all reached their goal, the terraforming is complete, and the game ends after that generation. Count your Terraform Rating and other VPs to determine the winning corporation!",
+    "created_by": 1,
+    "date_added": "2024-01-18T10:53:40.100Z",
+    "last_edited": "2024-01-18T10:53:40.100Z",
+    "genre": [
+      12,
+      14
+    ]
+  }
+},
+{
+  "model": "board_games.boardgame",
+  "pk": 6,
+  "fields": {
+    "title": "Dune: Imperium",
+    "publisher": "Dire Wolf",
+    "year": 2020,
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705575706/board-games/x0padbodmwouqz43zmce.jpg",
+    "description": "Dune: Imperium is a game that uses deck-building to add a hidden-information angle to traditional worker placement. It finds inspiration in elements and characters from the Dune legacy, both the new film from Legendary Pictures and the seminal literary series from Frank Herbert, Brian Herbert, and Kevin J. Anderson.\n\nAs a leader of one of the Great Houses of the Landsraad, raise your banner and marshal your forces and spies. War is coming, and at the center of the conflict is Arrakis – Dune, the desert planet.\n\nYou start with a unique leader card, as well as a deck identical to those of your opponents. As you acquire cards and build your deck, your choices will define your strengths and weaknesses. Cards allow you to send your Agents to certain spaces on the game board, so how your deck evolves affects your strategy. You might become more powerful militarily, able to deploy more troops than your opponents. Or you might acquire cards that give you an edge with the four political factions represented in the game: the Emperor, the Spacing Guild, the Bene Gesserit, and the Fremen.\n\nUnlike many deck-building games, you don’t play your entire hand in one turn. Instead, you draw a hand of cards at the start of every round and alternate with other players, taking one Agent turn at a time (playing one card to send one of your Agents to the game board). When it’s your turn and you have no more Agents to place, you’ll take a Reveal turn, revealing the rest of your cards, which will provide Persuasion and Swords. Persuasion is used to acquire more cards, and Swords help your troops fight for the current round’s rewards as shown on the revealed Conflict card.\n\nDefeat your rivals in combat, shrewdly navigate the political factions, and acquire precious cards. The Spice must flow to lead your House to victory!",
+    "created_by": 1,
+    "date_added": "2024-01-18T11:02:02.743Z",
+    "last_edited": "2024-01-18T11:02:02.743Z",
+    "genre": [
+      3,
+      12
+    ]
+  }
+},
+{
+  "model": "board_games.boardgame",
+  "pk": 7,
+  "fields": {
+    "title": "War of the Ring: Second Edition",
+    "publisher": "Ares Games",
+    "year": 2011,
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705575827/board-games/maqjfq7400oqvalqs31r.jpg",
+    "description": "In War of the Ring, one player takes control of the Free Peoples (FP), the other player controls Shadow Armies (SA). Initially, the Free People Nations are reluctant to take arms against Sauron, so they must be attacked by Sauron or persuaded by Gandalf or other Companions, before they start to fight properly: this is represented by the Political Track, which shows if a Nation is ready to fight in the War of the Ring or not.\n\nThe game can be won by a military victory, if Sauron conquers a certain number of Free People cities and strongholds or vice versa. But the true hope of the Free Peoples lies with the quest of the Ringbearer: while the armies clash across Middle Earth, the Fellowship of the Ring is trying to get secretly to Mount Doom to destroy the One Ring. Sauron is not aware of the real intention of his enemies but is looking across Middle Earth for the precious Ring, so that the Fellowship is going to face numerous dangers, represented by the rules of The Hunt for the Ring. But the Companions can spur the Free Peoples to the fight against Sauron, so the Free People player must balance the need to protect the Ringbearer from harm, against the attempt to raise a proper defense against the armies of the Shadow, so that they do not overrun Middle Earth before the Ringbearer completes his quest.\n\nEach game turn revolves around the roll of Action Dice: each die corresponds to an action that a player can do during a turn. Depending on the face rolled on each die, different actions are possible (moving armies, characters, recruiting troops, advancing a Political Track).\n\nAction Dice can also be used to draw or play Event Cards. Event Cards are played to represent specific events from the story (or events that could possibly have happened) that cannot be portrayed through normal game-play. Each Event Card can also create an unexpected turn in the game, allowing special actions or altering the course of a battle.",
+    "created_by": 1,
+    "date_added": "2024-01-18T11:03:57.462Z",
+    "last_edited": "2024-01-18T11:03:57.462Z",
+    "genre": [
+      11,
+      12
+    ]
+  }
+},
+{
+  "model": "board_games.boardgame",
+  "pk": 8,
+  "fields": {
+    "title": "Spirit Island",
+    "publisher": "Greater Than Games",
+    "year": 2017,
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705575975/board-games/lgq78kybonmzxlpwh4pn.jpg",
+    "description": "In the most distant reaches of the world, magic still exists, embodied by spirits of the land, of the sky, and of every natural thing. As the great powers of Europe stretch their colonial empires further and further, they will inevitably lay claim to a place where spirits still hold power - and when they do, the land itself will fight back alongside the islanders who live there.\n\nSpirit Island is a complex and thematic cooperative game about defending your island home from colonizing Invaders. Players are different spirits of the land, each with its own unique elemental powers. Every turn, players simultaneously choose which of their power cards to play, paying energy to do so. Using combinations of power cards that match a spirit's elemental affinities can grant free bonus effects. Faster powers take effect immediately, before the Invaders spread and ravage, but other magics are slower, requiring forethought and planning to use effectively. In the Spirit phase, spirits gain energy, and choose how / whether to Grow: to reclaim used power cards, to seek for new power, or to spread presence into new areas of the island.\n\nThe Invaders expand across the island map in a semi-predictable fashion. Each turn they explore into some lands (portions of the island); the next turn, they build in those lands, forming settlements and cities. The turn after that, they ravage there, bringing blight to the land and attacking any native islanders present. The islanders fight back against the Invaders when attacked, and lend the spirits some other aid, but may not always do so exactly as you'd hoped. Some Powers work through the islanders, helping them (eg) drive out the Invaders or clean the land of blight.\n\nThe game escalates as it progresses: spirits spread their presence to new parts of the island and seek out new and more potent powers, while the Invaders step up their colonization efforts. Each turn represents 1-3 years of alternate-history. At game start, winning requires destroying every last settlement and city on the board - but as you frighten the Invaders more and more, victory becomes easier: they'll run away even if some number of settlements or cities remain. Defeat comes if any spirit is destroyed, if the island is overrun by blight, or if the Invader deck is depleted before achieving victory.\n\nThe game includes different adversaries to fight against (eg: a Swedish Mining Colony, or a Remote British Colony). Each changes play in different ways, and offers a different path of difficulty boosts to keep the game challenging as you gain skill.",
+    "created_by": 1,
+    "date_added": "2024-01-18T11:06:20.835Z",
+    "last_edited": "2024-01-18T11:06:20.835Z",
+    "genre": [
+      1,
+      2,
+      12,
+      14
+    ]
+  }
+},
+{
+  "model": "board_games.boardgame",
+  "pk": 9,
+  "fields": {
+    "title": "Scythe",
+    "publisher": "Stonemaier Games",
+    "year": 2016,
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705576118/board-games/zl3nalbmmz3ttuybmptz.jpg",
+    "description": "It is a time of unrest in 1920s Europa. The ashes from the first great war still darken the snow. The capitalistic city-state known simply as “The Factory”, which fueled the war with heavily armored mechs, has closed its doors, drawing the attention of several nearby countries.\n\nScythe is an engine-building game set in an alternate-history 1920s period. It is a time of farming and war, broken hearts and rusted gears, innovation and valor. In Scythe, each player represents a character from one of five factions of Eastern Europe who are attempting to earn their fortune and claim their faction's stake in the land around the mysterious Factory. Players conquer territory, enlist new recruits, reap resources, gain villagers, build structures, and activate monstrous mechs.\n\nEach player begins the game with different resources (power, coins, combat acumen, and popularity), a different starting location, and a hidden goal. Starting positions are specially calibrated to contribute to each faction’s uniqueness and the asymmetrical nature of the game (each faction always starts in the same place). Scythe uses a streamlined action-selection mechanism (no rounds or phases) to keep gameplay moving at a brisk pace and reduce downtime between turns. While there is plenty of direct conflict for players who seek it, there is no player elimination.\n\nScythe gives players almost complete control over their fate. Other than each player’s individual hidden objective card, the only elements of luck or variability are “encounter” cards that players will draw as they interact with the citizens of newly explored lands. Each encounter card provides the player with several options, allowing them to mitigate the luck of the draw through their selection. Combat is also driven by choices, not luck or randomness. Every part of Scythe has an aspect of engine-building to it. Players can upgrade actions to become more efficient, build structures that improve their position on the map, enlist new recruits to enhance character abilities, activate mechs to deter opponents from invading, and expand their borders to reap greater types and quantities of resources. These engine-building aspects create a sense of momentum and progress throughout the game. The order in which players improve their engine adds to the unique feel of each game, even when playing one faction multiple times.",
+    "created_by": 1,
+    "date_added": "2024-01-18T11:08:43.406Z",
+    "last_edited": "2024-01-18T11:08:43.406Z",
+    "genre": [
+      12,
+      4
+    ]
+  }
+},
+{
+  "model": "board_games.boardgame",
+  "pk": 10,
+  "fields": {
+    "title": "7 Wonders Duel",
+    "publisher": "Repos Production",
+    "year": 2015,
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705576263/board-games/utxhgzdb1bc6kdmunmwy.jpg",
+    "description": "In many ways 7 Wonders Duel resembles its parent game 7 Wonders as over three ages players acquire cards that provide resources or advance their military or scientific development in order to develop a civilization and complete wonders.\n\nWhat's different about 7 Wonders Duel is that, as the title suggests, the game is solely for two players, with the players not drafting cards simultaneously from hands of cards, but from a display of face-down and face-up cards arranged at the start of a round. A player can take a card only if it's not covered by any others, so timing comes into play as well as bonus moves that allow you to take a second card immediately. As in the original game, each card that you acquire can be built, discarded for coins, or used to construct a wonder.\n\nEach player starts with four wonder cards, and the construction of a wonder provides its owner with a special ability. Only seven wonders can be built, though, so one player will end up short.\n\nPlayers can purchase resources at any time from the bank, or they can gain cards during the game that provide them with resources for future building; as you acquire resources, the cost for those particular resources increases for your opponent, representing your dominance in this area.\n\nA player can win 7 Wonders Duel in one of three ways: each time you acquire a military card, you advance the military marker toward your opponent's capital, giving you a bonus at certain positions; if you reach the opponent's capital, you win the game immediately; similarly, if you acquire any six of seven different scientific symbols, you achieve scientific dominance and win immediately; if none of these situations occurs, then the player with the most points at the end of the game wins.",
+    "created_by": 1,
+    "date_added": "2024-01-18T11:11:16.025Z",
+    "last_edited": "2024-01-18T11:11:16.025Z",
+    "genre": [
+      3,
+      14
+    ]
+  }
+},
+{
+  "model": "board_games.boardgame",
+  "pk": 11,
+  "fields": {
+    "title": "Nemesis",
+    "publisher": "Awaken Realms",
+    "year": 2018,
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705576360/board-games/cnbkvkbdvutbpqlfn3k0.jpg",
+    "description": "Playing Nemesis will take you into the heart of sci-fi survival horror in all its terror. A soldier fires blindly down a corridor, trying to stop the alien advance. A scientist races to find a solution in his makeshift lab. A traitor steals the last escape pod in the very last moment. Intruders you meet on the ship are not only reacting to the noise you make but also evolve as the time goes by. The longer the game takes, the stronger they become. During the game, you control one of the crew members with a unique set of skills, personal deck of cards, and individual starting equipment. These heroes cover all your basic SF horror needs. For example, the scientist is great with computers and research, but will have a hard time in combat. The soldier, on the other hand...\n\nNemesis is a semi-cooperative game in which you and your crewmates must survive on a ship infested with hostile organisms. To win the game, you have to complete one of the two objectives dealt to you at the start of the game and get back to Earth in one piece. You will find many obstacles on your way: swarms of Intruders (the name given to the alien organisms by the ship AI), the poor physical condition of the ship, agendas held by your fellow players, and sometimes just cruel fate.\n\nThe gameplay of Nemesis is designed to be full of climactic moments which, hopefully, you will find rewarding even when your best plans are ruined and your character meets a terrible fate.",
+    "created_by": 1,
+    "date_added": "2024-01-18T11:12:47.590Z",
+    "last_edited": "2024-01-18T11:12:47.590Z",
+    "genre": [
+      8,
+      2
+    ]
+  }
+},
+{
+  "model": "board_games.boardgame",
+  "pk": 12,
+  "fields": {
+    "title": "Wingspan",
+    "publisher": "Stonemaier Games",
+    "year": 2019,
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705693591/board-games/ro6x7puio3h57dw5h6qa.jpg",
+    "description": "Wingspan is a competitive, medium-weight, card-driven, engine-building board game from Stonemaier Games. It's designed by Elizabeth Hargrave and features over 170 birds illustrated by Beth Sobel, Natalia Rojas, and Ana Maria Martinez.\n\nYou are bird enthusiasts—researchers, bird watchers, ornithologists, and collectors—seeking to discover and attract the best birds to your network of wildlife preserves. Each bird extends a chain of powerful combinations in one of your habitats (actions). These habitats focus on several key aspects of growth:\n\nGain food tokens via custom dice in a birdfeeder dice tower\nLay eggs using egg miniatures in a variety of colors\nDraw from hundreds of unique bird cards and play them\nThe winner is the player with the most points after 4 rounds.",
+    "created_by": 2,
+    "date_added": "2024-01-19T19:50:09.844Z",
+    "last_edited": "2024-01-19T19:50:09.844Z",
+    "genre": [
+      4
+    ]
+  }
+}
+]

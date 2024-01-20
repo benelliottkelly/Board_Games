@@ -1,0 +1,42 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$MyGxFlcxgoqiW9JPpySfrm$yyq0q24DMKU4OkVcBeCyJ6D8qHnv2ZqY90SqTHEj9EM=",
+    "last_login": "2024-01-18T10:06:19Z",
+    "is_superuser": true,
+    "username": "Ben",
+    "first_name": "Ben",
+    "last_name": "Kelly",
+    "email": "ben@email.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-01-18T10:05:42Z",
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705330713/board-games/exj4cxokukpjeju6pl9z.jpg",
+    "bio": "I am Ben. I love board games, TTRPGs and painting miniatures.\r\nI sometimes Dungeon Master (DM) D&D games for my friends, the longest of which was a 2 year campaign which ran once a month.\r\nI have recently gotten into painting miniatures and so any board games which have cool minis are usually something that grabs my eye!",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$IUqgytu4dQsUOXH2ZNrzN1$kEdcZvtfcfrPgdSgL9jxcniFsZcvbbbvqvv+Z5p/Buc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mattmercer",
+    "first_name": "",
+    "last_name": "",
+    "email": "mattmercer@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-01-18T16:48:53.387Z",
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705596476/board-games/dunyfmqqw5jc6hg7rd23.jpg",
+    "bio": "Matthew Mercer, is an American voice actor and game designer who has provided voice work for cartoons, animations, video games, and English localizations of Japanese anime.",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

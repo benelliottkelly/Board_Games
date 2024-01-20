@@ -5,11 +5,26 @@
   color: var(--var-font-colour);
   h1 {
     color: var(--var-font-colour);
+    padding: 1em;
   }
   .profile-image-main {
     border: solid 5px var(--var-green-border);
     border-radius: 10px;
+    width: 300px;
+    max-width: 500px;
   } 
+  .special-characters {
+    font-family: "Gill Sans", sans-serif;
+  }
+  h4 {
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+  .bio {
+    @include text-container();
+    font-size: 1.2em;
+    min-width: 350px;
+  }
 }
 
 .owned-games-container, .reviews-made-container {
@@ -18,9 +33,25 @@
   border: solid 2px var(--var-green-border);
   border-radius: 5px;
   padding: 1em;
+  width: 350px;
   min-width: 330px;
   margin: 0.5em;
+  .carousel {
+    @include flex-center(row);
+    flex-wrap: wrap;
+  }
   h4 {
     display: inline-block;
   }
+  .details-container {
+    @include flex-center(column);
+    img {
+      width: 90%;
+    }
+  }
 }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+
+  }

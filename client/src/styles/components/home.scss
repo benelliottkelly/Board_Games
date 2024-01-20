@@ -6,7 +6,7 @@
   h3 {
     color: var(--var-font-colour);
     font-size: 2em;
-    animation: glow-flicker 2s linear infinite;
+    animation: glow-flicker 4s linear infinite;
   }
   .wavey {
     @include flex-center(row);
@@ -24,6 +24,7 @@
       animation: wavey 2.5s infinite;
       animation-delay: calc(.1s * var(--i));
       text-align: center;
+      text-shadow: 1px 1px 3px #ffffff, 1px 1px 5px rgba(199, 36, 177, 1), 1px 1px 5px rgba(199, 36, 177, 1), 1px 1px 5px rgba(199, 36, 177, 1);
     }
   }
 }
@@ -39,13 +40,13 @@
 
 @keyframes glow-flicker{
   0% {
-    text-shadow: 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1);
+    text-shadow: 1px 1px 5px #ffffff, 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1);
   }
   50% {
     text-shadow: 1px 1px 5px rgba(199, 36, 177, 0), 1px 1px 5px rgba(199, 36, 177, 0), 1px 1px 5px rgba(199, 36, 177, 0), 1px 1px 5px rgba(199, 36, 177, 0);
   }
   100% {
-    text-shadow: 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1);
+    text-shadow: 1px 1px 5px #ffffff, 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1), 1px 1px 20px rgba(199, 36, 177, 1);
   }
 }
 

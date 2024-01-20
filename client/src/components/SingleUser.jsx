@@ -21,14 +21,7 @@ export default function SingleUser() {
   useEffect(() => {
     const userMatch = isUserActiveUser(pk)
     setView(userMatch)
-  }, [view])
-
-
-  // Logout button
-  function logOut() {
-    removeToken()
-    setView(false)
-  }
+  }, [view, loggedIn, loadedData])
 
   return (
     <>
@@ -36,35 +29,39 @@ export default function SingleUser() {
         <h1>Profile: {username}</h1>
         <img className="profile-image-main" src={image} />
         {{ first_name } ? <h4>{first_name} {last_name}</h4> : null}
-        {view === true && <h4>{email}</h4>}
-        <p>{bio}</p>
+        {view === true && <h4 className="special-characters">{email}</h4>}
+        <p className="special-characters bio">{bio}</p>
         <article className="owned-games-container">
           <h4>Owned Games:</h4>
-          {/* Add in button to add more games */}
-          {games.length > 0 ?
-            games.map((obj, idx) => {
-              return <div key={idx}>
-                <h4>{obj.game.title} <span>({obj.game.year})</span></h4>
-                <img src={obj.game.image} />
-                <h4>Quantity: {obj.quantity}</h4>
-              </div>
-            })
-            :
-            <p>{username} has not added any games yet</p>
-          }
+          <div className="carousel">
+            {/* Add in button to add more games */}
+            {games.length > 0 ?
+              games.map((obj, idx) => {
+                return <div key={idx} className="details-container">
+                  <h4>{obj.game.title} <span className="special-characters">({obj.game.year})</span></h4>
+                  <img src={obj.game.image} />
+                  <h4>Quantity: {obj.quantity}</h4>
+                </div>
+              })
+              :
+              <p>{username} has not added any games yet</p>
+            }
+          </div>
         </article>
         <article className="reviews-made-container">
           <h4>Reviews Made:</h4>
-          {reviews.length > 0 ?
-            reviews.map((review, idx) => {
-              return <div key={idx} className='review-cards' style={{ backgroundImage: `url("${review.board_game.image}")` }}>
-                <h4>{review.board_game.title} <span>({review.rating}/5)</span></h4>
-                <p>{review.title}</p>
-              </div>
-            })
-            :
-            <p>{username} has not made any reviews yet</p>
-          }
+          <div className="carousel">
+            {reviews.length > 0 ?
+              reviews.map((review, idx) => {
+                return <div key={idx} className='details-container' style={{ backgroundImage: `url("${review.board_game.image}")` }}>
+                  <h4>{review.board_game.title} <span>({review.rating}/5)</span></h4>
+                  <p>{review.title}</p>
+                </div>
+              })
+              :
+              <p>{username} has not made any reviews yet</p>
+            }
+          </div>
         </article>
       </section>
     </>
