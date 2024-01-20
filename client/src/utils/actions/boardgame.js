@@ -14,18 +14,17 @@ export async function createBoardGame(request){
 }
 
 export async function editBoardGame(request, pk){
-  // const data = await formToObj(request)
   const data = request
   if (data.genre) {
     data.genre = data.genre.split(',')
   }
-  console.log('Patch data -> ', data)
-  return await axios.patch(`/api/boardgames/${pk}/`, data, {
+  const res = await axios.patch(`/api/boardgames/${pk}/`, data, {
     validateStatus: () => true,
     headers: {
       Authorization: `Bearer ${getToken()}`
     }
   })
+  return res
 }
 
 export async function deleteBoardGame(pk){
@@ -41,7 +40,6 @@ export async function deleteBoardGame(pk){
 export async function addBoardGameToCollection(request){
   const data = request
   data.quantity = parseInt(data.quantity)
-  console.log(data)
   const res = await axios.post(`/api/gamesowned/`, data, {
     validateStatus: () => true,
     headers: {
@@ -55,8 +53,7 @@ export async function addBoardGameToCollection(request){
 export async function editBoardGameInCollection(request){
   const data = request
   data.quantity = parseInt(data.quantity)
-  console.log(data)
-  return await axios.patch(`/api/gamesowned/`, data, {
+  const rest = await axios.patch(`/api/gamesowned/`, data, {
     validateStatus: () => true,
     headers: {
       Authorization: `Bearer ${getToken()}`

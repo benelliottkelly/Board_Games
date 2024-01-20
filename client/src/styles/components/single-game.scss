@@ -1,5 +1,12 @@
 @import '../global/variables.scss';
 
+.page-container {
+  @include flex-center(column);
+  padding: 1em;
+  width: 100vw;
+  min-width: 300px;
+  max-width: 3000px;
+}
 .show-game-container {
   @include flex-start(column);
   min-width: 350px;
@@ -61,15 +68,15 @@
     padding: 1em 1em 1em 1.5em;
     scrollbar-width: none;
     text-align: center;
-  }
-  .description-container::-webkit-scrollbar {
-    display: none;
+    @include text-container();
   }
   p {
-    @include text-container();
     width: 90%;
-    margin: 1em;
+    margin-left: 1.5em;
+    padding: 0.5em;
     font-size: 1em;
+    background-color: #eeeeeee7;
+    border-radius: 5px;
   }
   .owned-by-container {
     // The root of this is controlled in './profile.scss'
@@ -94,7 +101,6 @@
       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
     }
     .owner-username {
-      // display: none;
       text-align: center;
       text-wrap: wrap;
       padding: 0.2em;
@@ -115,6 +121,9 @@
 // Medium devices (tablets, 768px and up)
 @media (max-width: 768px) { 
   .show-game-container {
+    .description-container::-webkit-scrollbar {
+      display: none;
+    }
     .link-to-owner:hover {
       .to-owner-picture:hover {
         box-shadow: 1px 1px 7px #ffffff, -1px -1px 7px #ffffff, 2px 2px 10px var(--var-dark-purple-color), -2px -2px 10px var(--var-dark-purple-color);
@@ -126,6 +135,13 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
   .show-game-container {
+    .description-container {
+      scrollbar-width: 1em;
+    }
+    p {
+      font-size: 1.5em;
+      padding: 1.5em;
+    }
     .owned-by-container {
       .owner-username {
         display: none;

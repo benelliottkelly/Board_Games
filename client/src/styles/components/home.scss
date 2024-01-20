@@ -1,18 +1,22 @@
 .hero {
   align-self: flex-start;
-  width: 360px;
+  justify-self: center;
+  min-width: 360px;
+  width: 100vw;
   @include flex-center(column);
-  margin-top: 2em;
+  margin-top: 0px;
   h3 {
     color: var(--var-font-colour);
     font-size: 2em;
     animation: glow-flicker 4s linear infinite;
+    padding: 1em;
+    margin: 0px;
   }
   .wavey {
     @include flex-center(row);
     flex-wrap: wrap;
     position: relative;
-    min-width: 360px;
+    width: 360px;
     -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
     h1 {
       font-size: 40px;
@@ -73,9 +77,9 @@
   .hero {
     h3 {
       font-size: 4em;
-      margin: 1em;
     }
     .wavey {
+      width: 100%;
       h1 {
         font-size: 4em;
       }

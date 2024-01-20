@@ -9,6 +9,7 @@
 @import './components/add-game.scss';
 @import './components/add-to-collection.scss';
 @import './components/single-game.scss';
+@import './components/edit-board-game.scss';
 
 * {
   box-sizing: border-box;
@@ -25,11 +26,9 @@ body {
 }
 
 main {
-  display: flex;
-  justify-content: center;
   margin: 0;
   min-height: 90vh;
-  // background-color: #b1ff9c;
+  min-width: 375px;
   background-color: var(--var-green-color);
 }
 

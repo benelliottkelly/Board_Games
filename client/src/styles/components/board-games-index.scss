@@ -3,7 +3,7 @@
 .board-game-library {
   color: var(--var-font-colour);
   padding: 1em;
-
+  min-width: 360px;
   h1 {
     text-align: center;
     font-size: 2em;
@@ -12,6 +12,8 @@
   .library-info {
     @include text-container();
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    margin: 0 auto;
     p {
       font-size: 1.2em;
     }
@@ -58,7 +60,7 @@
     border: solid 5px #bb8c52;
     width: 100%;
     height: 200px;
-
+    min-width: 300px;
     .inner-walls {
       border-left: 30px solid #916a3b;
       border-bottom: 20px solid #a37844;

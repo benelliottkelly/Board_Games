@@ -17,9 +17,9 @@ export default function Login() {
     document.documentElement.scrollTop = 0
   }
   scrollUp()
-  
+
   useEffect(() => {
-    if(res?.status === 200) {
+    if (res?.status === 200) {
       console.log(res)
       setToken(res.data.access)
       setLoggedIn(true)
@@ -28,16 +28,19 @@ export default function Login() {
   }, [res])
 
   return (
-    <>
-    <section className="form-container">
-      <h1>Login</h1>
-      <Form className='form' id='login-form' method='POST'>
-        <input type="username" name="username" placeholder='Username' />
-        <input type="password" name="password" placeholder="Password" />
-        <button type="submit" className="btn form-button">Login</button>
-        {res && <p className='danger'>{res.data.message}</p>}
-      </Form>
+    <section className='form-page'>
+      <section className="form-container">
+        <h1>Login</h1>
+        <Form className='form' id='login-form' method='POST'>
+          <input type="username" name="username" placeholder='Username' />
+          <input type="password" name="password" placeholder="Password" />
+          <button type="submit" className="btn form-button">Login</button>
+          {res && <p className='danger'>{res.data.message}</p>}
+        </Form>
+      </section>
+      <aside className="large-logo-container">
+        <img className='large-logo' src='../src/assets/images/logo.jpeg' />
+      </aside>
     </section>
-    </>
   )
 }

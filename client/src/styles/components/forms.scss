@@ -1,9 +1,27 @@
 @import '../global/variables.scss';
 
-.form-container {
-  position: absolute;
+.form-page {
   @include flex-center(column);
-  margin: 1em auto;
+  padding: 1em;
+  width: 100vw;
+  min-width: 300px;
+  max-width: 3000px;
+  .large-logo-container {
+    display: none;
+    max-width: 700px;
+    width: 50%;
+    padding: 2em;
+    .large-logo {
+      position: relative;
+      width: 100%;
+      box-shadow: 1px 1px 10px #ffffff, 1px 1px 20px var(--var-orange-color), 1px 1px 20px var(--var-orange-color), 1px 1px 20px var(--var-orange-color);
+    }
+  }
+}
+
+.form-container {
+  @include flex-center(column);
+  margin: 0px;
   background-color: rgba(255, 255, 255, 0.5 );
   border: solid 2px var(--var-green-border);
   border-radius: 5px;
@@ -16,15 +34,27 @@
   }
   .form {
     @include flex-center(column);
+    padding: 0.5em;
     input {
-      font-size: 1em;
+      font-size: 1.5em;
       margin-bottom: 1.5em;
       border-radius: 5px;
     }
     .basic-multi-select {
       margin-bottom: 1.5em;
       border-radius: 5px;
-      width: 100%;
+      width: 80%;
+      .select__multi-value {
+        background-color: var(--var-dark-purple-color);
+        color: #ffffff;
+        .select__multi-value__label {
+          color: #ffffff;
+        }
+      }
+    }
+    .image-upload-input {
+      width: 80%;
+      font-size: 1em;
     }
     .image-upload-container {
       position: relative;
@@ -41,6 +71,7 @@
     }
     textarea {
       width: 300px;
+      height: 6em;
       margin-bottom: 1.5em;
       border-radius: 5px;
     }
@@ -48,7 +79,7 @@
 }
 
 .form-button {
-  font-size: 1.5em;
+  font-size: 1.5em !important;
   margin-bottom: 1.5em;
   border-radius: 5px;
   --bs-btn-color: #ffffff !important;
@@ -69,7 +100,6 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .form-container {
-    margin: 2em auto;
     width: 80vw;
     padding: 2em;
     // h1 {
@@ -109,6 +139,7 @@
       textarea {
         width: 90%;
         font-size: 1.5em;
+        height: 6em;
       }
       .form-button {
         font-size: 2em;
@@ -126,10 +157,13 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .form-container {
+    width: 50%;
     max-width: 800px;
     .form {
+      width: 80%;
       textarea {
         width: 100%;
+        height: 8em;
         font-size: 1.5em;
       }
       .form-button {
@@ -147,8 +181,11 @@
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
-  .form-container {
-    align-self: flex-start;
-    margin-left: 5em;
+  .form-page {
+    @include flex-even(row);
+    .large-logo-container {
+      @include flex-center(column);
+    }
   }
+
 }

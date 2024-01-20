@@ -4,7 +4,9 @@
   @include flex-start(column);
   min-width: 350px;
   max-width: 1100px;
-  width: 90vw;
+  width: 100vw;
+  padding: 1em;
+  margin: 0 auto;
   h2 {
     @include text-container();
     margin: 1em;
@@ -26,17 +28,20 @@
   }
 }
 .large-game-image {
-  width: 100%;
+  max-height: 50vh;
+  aspect-ratio: 1;
+  max-width: 100%;
   border: solid 2px var(--var-dark-purple-color);
   box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
 }
 
+// Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .add-to-collection-container {
   .quantity-form {
-    margin-top: 0.5em;
+    margin-top: 1em;
       input {
-        margin-bottom: 0.5em;
+        margin-bottom: 1em;
       }
     }
   }

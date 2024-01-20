@@ -1,0 +1,44 @@
+@import '../global/variables.scss';
+
+.page-container {
+  // page-container should be edited in './single-game.scss'
+
+  #editing-title {
+    font-size: 2em;
+    color: var(--var-font-colour);
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+  .secondary-game-display {
+    display: none;
+    width: 50vw;
+    max-width: 1200px;
+    padding: 2em 5em;
+    .show-game-container {
+      width: 100%;
+      text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      .large-game-image {
+        max-height: 800px;
+        height: auto;
+        width: auto;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .page-container {
+    #editing-title {
+      font-size: 4em;
+    }
+  }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .page-container {
+    .secondary-game-display {
+      @include flex-start(column)
+    }
+  }
+}

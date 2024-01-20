@@ -56,7 +56,7 @@ export default function CreateBoardGame() {
     <>
       {userPK
         ?
-        <section>
+        <section className='form-page'>
           <section className='form-container'>
             <Form className='form' method='POST'>
               <input type='hidden' name='created_by' value={formData.created_by} />
@@ -82,6 +82,9 @@ export default function CreateBoardGame() {
               {res?.status > 399 && <p>{res.status}: {res.statusText}</p>}
             </Form>
           </section>
+          <aside className="large-logo-container">
+            <img className='large-logo' src='../src/assets/images/logo.jpeg' />
+          </aside>
         </section>
         :
         <Link to={`/login/`}>Login to add a new board game</Link>

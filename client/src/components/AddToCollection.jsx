@@ -7,7 +7,6 @@ import { addBoardGameToCollection } from '../utils/actions/boardgame'
 export default function AddToCollection() {
 
   const loadedData = useLoaderData()
-  console.log(loadedData)
   const { boardGame, genres } = loadedData
   const { id, image, title, year, owned_by } = boardGame
 
