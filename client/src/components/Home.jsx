@@ -1,3 +1,5 @@
+import Slider from "./Slider"
+
 export default function Home() {
 
   const letters = ['T', 'h', 'e', " ", ' B', 'o', 'a', 'r', 'd', ' ', 'G', 'a', 'm', 'e', ' ', 'L', 'i', 'b', 'r', 'a', 'r', 'y' ]
@@ -19,6 +21,7 @@ export default function Home() {
             </h1>
           ))}
         </div>
+        <Slider />
       </section>
     </>
   )

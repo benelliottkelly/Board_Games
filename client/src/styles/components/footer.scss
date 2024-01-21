@@ -1,0 +1,22 @@
+@import '../global/variables.scss';
+
+footer {
+  background-color: var(--var-dark-color);
+  @include flex-between(row);
+  flex-wrap: wrap;
+  color: #FAF9F6;
+  font-size: 20px;
+  p {
+    margin: 0 auto;
+    padding: 10px 20px;
+  }
+  .link {
+    margin: 0 auto;
+    color: #FAF9F6;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .link:hover {
+    text-decoration: underline;
+  }
+}

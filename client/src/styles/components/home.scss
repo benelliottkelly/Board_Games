@@ -2,14 +2,14 @@
   align-self: flex-start;
   justify-self: center;
   min-width: 360px;
-  width: 100vw;
+  width: 100%;
   @include flex-center(column);
   margin-top: 0px;
   h3 {
     color: var(--var-font-colour);
     font-size: 2em;
     animation: glow-flicker 4s linear infinite;
-    padding: 1em;
+    padding: 20px;
     margin: 0px;
   }
   .wavey {
@@ -62,7 +62,6 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
   .hero {
-      width: 90vw;
       h3 {
         font-size: 3em;
       }

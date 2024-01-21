@@ -3,6 +3,7 @@ import { Outlet, useNavigation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import LoadingScreen from './components/LoadingScreen'
 import { LoginProvider } from './components/LoginContext'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
               <LoadingScreen />
           }
         </main>
+        <Footer />
       </LoginProvider>
     </>
   )
