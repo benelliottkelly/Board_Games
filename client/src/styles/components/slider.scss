@@ -7,7 +7,7 @@
   width: 80%;
   max-width: 1600px;
   max-height: 400px;
-  background-image: url('../src/assets/images/board-game-library.jpg');
+  
   @include background-image(cover);
   border: solid 10px rgba(43, 25, 11, 0.8); 
   border-radius: 5px;
@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: 90% auto;
+    background-size: 75% auto;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -33,6 +33,21 @@
     padding: 1px;
     color: #000000;
     text-shadow: -1px -1px 0 #FAF9F6, 1px -1px 0 #FAF9F6, -1px 1px 0 #FAF9F6, 1px 1px 0 #FAF9F6;
+  }
+}
+#loaded-slide {
+  background-image: url('../src/assets/images/board-game-library.jpg');
+}
+#loading-slide {
+  background-image: url('../src/assets/images/loading-library.gif');
+  @include flex-center(column);
+  .loading-container{
+    .loading-title {
+      color: #FAF9F6;
+      h2 {
+        font-size: 1.5em;
+      }
+    }
   }
 }
 
@@ -49,7 +64,16 @@
       background-size: 90% auto;
     }
     .slide-title {
-      font-size: 2em;
+      font-size: 3em;
+    }
+  }
+  #loading-slide {
+    .loading-container{
+      .loading-title {
+        h2 {
+          font-size: 3em;
+        }
+      }
     }
   }
 }
@@ -73,6 +97,15 @@
     }
     .slide-title {
       font-size: 2.5em;
+    }
+  }
+  #loading-slide {
+    .loading-container{
+      .loading-title {
+        h2 {
+          font-size: 5em;
+        }
+      }
     }
   }
 }
