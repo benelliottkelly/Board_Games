@@ -4,24 +4,34 @@
   @include flex-center(column);
   height: 80vh;
   width: 100vw;
-  .loading-title {
-    display: flex;
-    .loading-dots {
-      animation: loading 2s linear infinite;
-    }
-    #dot-2 {
-      animation-delay: 0.6s;
-    }
-    #dot-3 {
-      animation-delay: 0.6s;
-    }
-  }
   .loader {
     @include background-image(cover);
     background-image: url('../assets/images/penguin-game.gif');
     height: 20em;
     width: 20em;
 
+  }
+}
+
+.loading-title {
+  display: flex;
+  .loading-dots {
+    animation: loading 2s linear infinite;
+  }
+  #dot-2 {
+    animation-delay: 0.6s;
+  }
+  #dot-3 {
+    animation-delay: 0.6s;
+  }
+}
+
+.all-board-games-loader {
+  @include flex-center(column);
+  padding-top: 100px;
+  width: 100%;
+  h2 {
+    font-size: 3em;
   }
 }
 

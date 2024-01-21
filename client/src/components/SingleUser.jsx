@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { isUserActiveUser, removeToken } from "../utils/helpers/common"
-import { useActionData, useLoaderData } from "react-router-dom"
+import { useActionData, useLoaderData, Link } from "react-router-dom"
 import { useContext } from 'react'
 import { loginContext } from './LoginContext'
 import { v4 as uuidv4 } from 'uuid'
@@ -51,7 +51,7 @@ export default function SingleUser() {
               games.map((obj) => {
                 return <div key={uuidv4()} className="details-container">
                   <h4>{obj.game.title} <span className="special-characters">({obj.game.year})</span></h4>
-                  <img src={obj.game.image} />
+                  <Link to={`/boardgames/${obj.game.id}`} ><img src={obj.game.image} /></Link>
                   <h4>Quantity: {obj.quantity}</h4>
                 </div>
               })

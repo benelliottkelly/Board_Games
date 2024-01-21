@@ -18,23 +18,55 @@ export default function AllBoardGames() {
   const navigate = useNavigate()
 
   // States
+  const [isLoading, setIsLoading] = useState(true)
   const [showModal, setShowModal] = useState(false)
+  const [displayGames, setDisplayGames] = useState([])
+  const [searchText, setSearchText] = useState('')
+  const [filter, setFilter] = useState('All')
+  const [genresList, setGenresList] = useState()
 
   // Functions
+  // * For search bar
+  useEffect(() => {
+    async function getData() {
+      const res = await loadedData
+      const { boardgames } = res
+      setDisplayGames(...displayGames, boardgames)
+      setIsLoading(false)
+    }
+    getData()
+  }, [loadedData])
+
+
+  useEffect(() => {
+    const allGenres = [... new Set(genres.map(genre => genre.name))]
+    allGenres.unshift('All')
+    setGenresList(allGenres)
+  }, [genres])
+
+  useEffect(() => {
+    const pattern = new RegExp(searchText, 'i')
+    setDisplayGames(boardgames.filter(game => {
+      const genres = game.genre.map(genre => genre.name)
+      return ((filter === 'All' || genres.includes(filter)) && pattern.test(game.title))
+    }))
+  }, [searchText, filter])
+
+  // * Scroll to top of page
   function scrollUp() {
     document.documentElement.scrollTop = 0
   }
   scrollUp()
-  
+
+  // * Close add board game modal when request is successful
   useEffect(() => {
-    console.log('res ->', res)
     if (res?.status === 201) {
       setShowModal(false)
     }
   }, [res])
 
+  // * Navigate to add game to collection screen upon clicking green +
   function addGameToCollection(e) {
-    console.log(e.target.value)
     navigate(`/boardgames/${e.target.value}/collect/`)
   }
 
@@ -44,7 +76,7 @@ export default function AllBoardGames() {
         show={showModal}
         fullscreen={true}
         onHide={() => setShowModal(false)}
-        centered 
+        centered
         className='add-game-modal'>
         <Modal.Header closeButton>
           <Modal.Title>Add Board Game</Modal.Title>
@@ -60,16 +92,34 @@ export default function AllBoardGames() {
         <p>To add an existing game to your collection click the <span id='add-explainer'>+</span> button and input how many boxes of the game you own.</p>
         <p>Or to view the game in greater detail click on the box itself.</p>
       </article>
-      <div className='bookshelf-outer'>
-        <Container className='bookshelf'>
-            {boardgames.length > 0 &&
-              boardgames.map((obj) => {
-                return (
-                    <div className='board-game-list-container'>
+      {isLoading ? (
+        <div className='loading-title all-board-games-loader'>
+          <h2>Loading<span className='loading-dots' id='dot-1'>.</span><span className='loading-dots' id='dot-2'>.</span><span className='loading-dots' id='dot-3'>.</span></h2>
+        </div>
+      ) : (
+        <>
+          <section className='filters-container' >
+            <select value={filter} className='filter-inputs' id="genre-filters" onChange={(evt) => setFilter(evt.target.value)}>
+              {genresList.map((genre) => {
+                return <option value={genre} key={uuidv4()}>{genre}</option>
+              })
+              }
+            </select>
+            <input className='filter-inputs' placeholder='Search'
+              onChange={(evt) => setSearchText(evt.target.value)}
+              value={searchText}
+            ></input>
+          </section>
+          {displayGames.length > 0 &&
+            <div className='bookshelf-outer'>
+              <Container className='bookshelf'>
+                {displayGames.map((obj) => {
+                  return (
+                    <div key={uuidv4()} className='board-game-list-container'>
                       <div className='inner-walls'>
-                          <button className='add-to-collection-button' value={obj.id} onClick={addGameToCollection}>+</button>
+                        <button className='add-to-collection-button' value={obj.id} onClick={addGameToCollection}>+</button>
                         <div className='back-wall' >
-                          <Link className='game-link' to={`/boardgames/${obj.id}/`} key={uuidv4()}>
+                          <Link className='game-link' to={`/boardgames/${obj.id}/`} >
                             <div className='single-game' style={{ backgroundImage: `url("${obj.image}")` }}>
                               <h3>{obj.title}</h3>
                             </div>
@@ -77,10 +127,13 @@ export default function AllBoardGames() {
                         </div>
                       </div>
                     </div>
-                )
-              })}
-        </Container>
-      </div>
+                  )
+                })}
+              </Container>
+            </div>
+          }
+        </>
+      )}
     </section>
   )
 }

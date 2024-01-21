@@ -30,9 +30,6 @@ export default function Slider() {
           <article className='loading-container'>
             <div className='loading-title'>
               <h2>Loading the Library<span className='loading-dots' id='dot-1'>.</span><span className='loading-dots' id='dot-2'>.</span><span className='loading-dots' id='dot-3'>.</span></h2>
-              <div>
-                <div className="dot-flashing"></div>
-              </div>
             </div>
           </article>
         </div>
@@ -40,7 +37,7 @@ export default function Slider() {
         <div id='loaded-slide' className='slide-container'>
           <Slide>
             {boardGames.length > 0 && boardGames.map((game) => {
-              return <Link className='slide-game-link' key={uuidv4} to={`/boardgames/${game.id}`}>
+              return <Link className='slide-game-link' key={uuidv4()} to={`/boardgames/${game.id}`}>
                 <div className='slide-image' style={{ backgroundImage: `url('${game.image}')` }}>
                 </div>
                 <div className='slide-title'>{game.title}</div>
