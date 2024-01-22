@@ -88,5 +88,131 @@
     "game_owner": 1,
     "quantity": 999
   }
+},
+{
+  "model": "games_owned.gameowned",
+  "pk": 11,
+  "fields": {
+    "game": 1,
+    "game_owner": 3,
+    "quantity": 1
+  }
+},
+{
+  "model": "games_owned.gameowned",
+  "pk": 12,
+  "fields": {
+    "game": 2,
+    "game_owner": 4,
+    "quantity": 1
+  }
+},
+{
+  "model": "games_owned.gameowned",
+  "pk": 13,
+  "fields": {
+    "game": 2,
+    "game_owner": 7,
+    "quantity": 1
+  }
+},
+{
+  "model": "games_owned.gameowned",
+  "pk": 14,
+  "fields": {
+    "game": 3,
+    "game_owner": 6,
+    "quantity": 1
+  }
+},
+{
+  "model": "games_owned.gameowned",
+  "pk": 15,
+  "fields": {
+    "game": 3,
+    "game_owner": 9,
+    "quantity": 1
+  }
+},
+{
+  "model": "games_owned.gameowned",
+  "pk": 16,
+  "fields": {
+    "game": 4,
+    "game_owner": 2,
+    "quantity": 3
+  }
+},
+{
+  "model": "games_owned.gameowned",
+  "pk": 17,
+  "fields": {
+    "game": 4,
+    "game_owner": 7,
+    "quantity": 1
+  }
+},
+{
+  "model": "games_owned.gameowned",
+  "pk": 18,
+  "fields": {
+    "game": 5,
+    "game_owner": 4,
+    "quantity": 1
+  }
+},
+{
+  "model": "games_owned.gameowned",
+  "pk": 19,
+  "fields": {
+    "game": 6,
+    "game_owner": 7,
+    "quantity": 1
+  }
+},
+{
+  "model": "games_owned.gameowned",
+  "pk": 20,
+  "fields": {
+    "game": 6,
+    "game_owner": 5,
+    "quantity": 1
+  }
+},
+{
+  "model": "games_owned.gameowned",
+  "pk": 21,
+  "fields": {
+    "game": 7,
+    "game_owner": 2,
+    "quantity": 1
+  }
+},
+{
+  "model": "games_owned.gameowned",
+  "pk": 22,
+  "fields": {
+    "game": 7,
+    "game_owner": 6,
+    "quantity": 1
+  }
+},
+{
+  "model": "games_owned.gameowned",
+  "pk": 23,
+  "fields": {
+    "game": 11,
+    "game_owner": 3,
+    "quantity": 1
+  }
+},
+{
+  "model": "games_owned.gameowned",
+  "pk": 24,
+  "fields": {
+    "game": 12,
+    "game_owner": 8,
+    "quantity": 1
+  }
 }
 ]

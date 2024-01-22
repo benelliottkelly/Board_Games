@@ -4,7 +4,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$720000$MyGxFlcxgoqiW9JPpySfrm$yyq0q24DMKU4OkVcBeCyJ6D8qHnv2ZqY90SqTHEj9EM=",
-    "last_login": "2024-01-18T10:06:19Z",
+    "last_login": "2024-01-22T09:53:41.433Z",
     "is_superuser": true,
     "username": "Ben",
     "first_name": "Ben",
@@ -35,6 +35,146 @@
     "date_joined": "2024-01-18T16:48:53.387Z",
     "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705596476/board-games/dunyfmqqw5jc6hg7rd23.jpg",
     "bio": "Matthew Mercer, is an American voice actor and game designer who has provided voice work for cartoons, animations, video games, and English localizations of Japanese anime.",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$F4C8568dj7ZxsuaBPJnqSn$SKKnRPwbGEvtkTJGa30Iz+XhiDh7KA2baignzRQ0c1M=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ashleyjohnson",
+    "first_name": "",
+    "last_name": "",
+    "email": "ashleyjohnson@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-01-22T09:39:47.168Z",
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705916342/board-games/hohddic0oxor4jwnubhq.jpg",
+    "bio": "Ashley Suzanne Johnson (born August 9, 1983) is an American actress. She became known as a child actress for her role as Chrissy Seaver on Growing Pains (1990–1992). As an adult, she is known for television roles as Amber Ahmed on The Killing (2011–2012) and Patterson on Blindspot (2015–2020). She has appeared in films such as What Women Want (2000), The Help (2011), and Much Ado About Nothing (2012), and is a cast member on the Dungeons & Dragons web series Critical Role (2015–present). She became the president of the show's charity branch, the Critical Role Foundation, upon its launch in 2020.",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$J4QqN7KCDW2LAnDWWIi3YS$5TsLOEP5wQQGNedMew1jCoTc8H2f0d/ZFr5VwZkaMRE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "traviswillingham",
+    "first_name": "",
+    "last_name": "",
+    "email": "traviswillingham@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-01-22T09:41:12.991Z",
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705916450/board-games/ykvycztg8wmpefak2rxm.jpg",
+    "bio": "Travis Willingham is an American voice actor and CEO of Critical Role Productions. Some of his notable anime roles include Roy Mustang in Fullmetal Alchemist and Fullmetal Alchemist: Brotherhood, Cleo in Glass Fleet, Ginko in Mushishi, Portgas D. Ace in One Piece, Takashi \"Mori\" Morinozuka in Ouran High School Host Club, Yu Kanda in D. Gray-man, and Cameron Campbell in Camp Camp.\n\nWillingham's video game roles include Guile in the Street Fighter franchise, Knuckles the Echidna in the Sonic the Hedgehog franchise, Thor in various Marvel games, and Issac Frost in \"Fight Night Champion\". He is a regular cast member of the web series Critical Role, in which he and other voice actors play Dungeons & Dragons, and has served as the inaugural CEO of Critical Role Productions since 2019.",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$qzKx9qpR7cKYJNZmyy1LlA$fFPUGhLcEFkFiw+B2HG33L5mJegkNwSP10kuI2wBc24=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "laurabailey",
+    "first_name": "",
+    "last_name": "",
+    "email": "laurabailey@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-01-22T09:42:51.746Z",
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705916524/board-games/g14l0qiqaptyuforoby7.jpg",
+    "bio": "Laura Bailey is an American voice actress. She made her voice acting debut as Kid Trunks in the Funimation dub of Dragon Ball Z and has since voiced Emily / Glitter Lucky in Glitter Force, Tohru Honda in Fruits Basket, Lust in Fullmetal Alchemist and Fullmetal Alchemist: Brotherhood, the title character in the Funimation dub of Shin-Chan, and Maka Albarn in Soul Eater. She is a cast member of the web series Critical Role, playing Vex'ahlia (\"Vex\"), Jester Lavorre, and Imogen Temult.\n\nBailey's video game voice roles include Rayne in the BloodRayne franchise, Kira Carsen in Star Wars: The Old Republic, Kainé in Nier, Jaina Proudmoore in World of Warcraft, Rise Kujikawa in Persona 4, the Female Protagonist in Persona 3 Portable, Chun-Li in Street Fighter, Serah Farron in Final Fantasy XIII, the title role in Catherine, Serana in The Elder Scrolls V: Skyrim – Dawnguard, Oriana Lawson in Mass Effect 3, Lucina in Fire Emblem Awakening, Abigail \"Fetch\" Walker in Infamous Second Son and First Light, Fiona in Tales from the Borderlands, Nadine Ross in Uncharted 4: A Thief's End and The Lost Legacy, and Kait Diaz in Gears of War. For her voice role as Abby Anderson in the 2020 video game The Last of Us Part II, she won the BAFTA Award for Best Performer in a Leading Role and the Game Award for Best Performance.\n\nBailey has also voiced Catwoman in Batman: The Telltale Series, Supergirl in Injustice 2, Mary Jane Watson in the Marvel's Spider-Man series, and Black Widow in a number of Marvel projects (particularly the television series Avengers Assemble and the video game Marvel's Avengers).",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$JaYxefFdpBFWNWzcZlVkX3$pg7PWbdb54ZZv4FXf/lYIy6GwWheKbmD/lFOHJr3bHE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "liamobrien",
+    "first_name": "",
+    "last_name": "",
+    "email": "liamobrien@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-01-22T09:44:39.742Z",
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705916632/board-games/sghbwot6wree9acvk3fg.jpg",
+    "bio": "Liam O'Brien is an American voice actor, writer, and director. He is a regular cast member of the Dungeons & Dragons actual play series Critical Role, playing Vax'ildan (\"Vax\"), Caleb Widogast, and Orym.[1] He has been involved in many video games, cartoons, and English-language adaptations of Japanese anime. His major anime roles include Gaara in Naruto, Naruto Shippuden, and Boruto, Vincent Law in Ergo Proxy, Captain Jushiro Ukitake in Bleach, Lloyd in Code Geass, Kenzo Tenma in Monster, Akihiko Sanada in Persona 3, and Nephrite in the Viz Media dub of Sailor Moon.\n\nIn cartoons, O'Brien has voiced characters in shows such as Star Wars Rebels, Transformers: Robots in Disguise, Avengers Assemble, Wolverine and the X-Men, and Hulk and the Agents of S.M.A.S.H.. In video games, he voiced Gollum in Middle-earth: Shadow of Mordor and its sequel, Caius Ballad in Final Fantasy XIII-2 and Lightning Returns: Final Fantasy XIII, War in Darksiders, Asura in Asura's Wrath, Ieyasu Tokugawa in Sengoku Basara: Samurai Heroes, Illidan Stormrage in World of Warcraft and Heroes of the Storm, Yasuo in League of Legends, Grimoire Weiss in Nier and Nier: Replicant ver.1.22474487139..., the Warden in For Honor, and Barker in Titanfall 2.",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$Stydgo98kTPYWAYq6IWPBa$PdjfBeAz4Lnd+XA832Pwk24MSeuTGOkQ6GnL8kDIBb8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "taliesinjaffe",
+    "first_name": "",
+    "last_name": "",
+    "email": "taliesinjaffe@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-01-22T09:46:03.156Z",
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705916734/board-games/eqlraveexsdvatubcd6r.jpg",
+    "bio": "Taliesin Jaffe (/ˈtælɪsən ˈdʒæfi/) is an American voice actor, voice director and screenwriter. He has worked on English-dubbing roles for anime and video games. He is a cast member on Critical Role, a web series in which he plays Dungeons & Dragons with other voice actors. Jaffe has also frequently voiced the Flash in various video games.",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$GwvjTcXHrF6VHNfHHZCV5b$fDYoCo5NRMnAoLbnN+3WsY7cGyBcUZ/3+vErY+n+DbI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "marisharay",
+    "first_name": "",
+    "last_name": "",
+    "email": "marisharay@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-01-22T09:48:04.136Z",
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705916849/board-games/ufwzaxx01fnlecogov25.jpg",
+    "bio": "Marisha Ray Huber is an American voice actress, host, producer, and creative director. She is best known for her roles as herself and her characters Keyleth, Beauregard, and Laudna on the Dungeons & Dragons web series Critical Role. In video games, she most notably voiced Margaret in Persona 4 Arena Ultimax and Persona Q, Laura S. Arseid in The Legend of Heroes: Trails of Cold Steel series, and Miranda in Metal Gear: Survive.",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$9wxAFqtszBrTA5fBxQtwhc$E1Ce6w2ngM3FuT2CgDBfCbc+mLIJfs+oFVR62HZumKY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "samriegel",
+    "first_name": "",
+    "last_name": "",
+    "email": "blackwidow69@aol.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-01-22T09:51:11.618Z",
+    "image": "https://res.cloudinary.com/dqk3feale/image/upload/v1705917058/board-games/i3qgidypukv62e63bq1w.jpg",
+    "bio": "Samuel Brent Oscar Riegel, sometimes credited as Jack Lingo, is an American voice actor, director, and writer. He is a regular cast member of the web series Critical Role, in which he and other fellow voice actors play Dungeons & Dragons. He is best known for voice roles as Donatello in the 2003 Teenage Mutant Ninja Turtles series and Phoenix Wright in the Ace Attorney games. For Nickelodeon, he was the voice director for Fresh Beat Band of Spies and Sanjay and Craig, as well as the voice of Riven in the revival of Winx Club.",
     "groups": [],
     "user_permissions": []
   }
