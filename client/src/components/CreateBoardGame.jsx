@@ -3,6 +3,7 @@ import { loginOrProfile } from '../utils/helpers/common'
 import { Form, Link, useActionData, useLoaderData, useNavigate } from 'react-router-dom'
 import ImageUploadField from './ImageUploadField'
 import Select from 'react-select'
+import logo from '../assets/images/logo.jpeg'
 
 export default function CreateBoardGame() {
   // Loaders
@@ -83,7 +84,7 @@ export default function CreateBoardGame() {
             </Form>
           </section>
           <aside className="large-logo-container">
-            <img className='large-logo' src='../src/assets/images/logo.jpeg' />
+            <img className='large-logo' src={logo} />
           </aside>
         </section>
         :

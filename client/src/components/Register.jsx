@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Form, useActionData, useNavigate, Link } from 'react-router-dom'
 import ImageUploadField from './ImageUploadField'
+import logo from '../assets/images/logo.jpeg'
 
 export default function Register() {
   // Loaders
@@ -52,7 +53,7 @@ export default function Register() {
         </Form>
       </section>
       <aside className="large-logo-container">
-        <img className='large-logo' src='../src/assets/images/logo.jpeg' />
+        <img className='large-logo' src={logo} />
       </aside>
     </section>
   )

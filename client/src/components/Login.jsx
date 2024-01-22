@@ -3,6 +3,7 @@ import { Form, useActionData, useNavigate } from "react-router-dom"
 import { setToken } from "../utils/helpers/common"
 import { useContext } from 'react'
 import { loginContext } from './LoginContext'
+import logo from '../assets/images/logo.jpeg'
 
 export default function Login() {
   const res = useActionData()
@@ -39,7 +40,7 @@ export default function Login() {
         </Form>
       </section>
       <aside className="large-logo-container">
-        <img className='large-logo' src='../src/assets/images/logo.jpeg' />
+        <img className='large-logo' src={logo} />
       </aside>
     </section>
   )

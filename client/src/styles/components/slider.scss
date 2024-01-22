@@ -36,10 +36,10 @@
   }
 }
 #loaded-slide {
-  background-image: url('../src/assets/images/board-game-library.jpg');
+  background-image: url('../assets/images/board-game-library.jpg');
 }
 #loading-slide {
-  background-image: url('../src/assets/images/loading-library.gif');
+  background-image: url('../assets/images/loading-library.gif');
   @include flex-center(column);
   .loading-container{
     .loading-title {
