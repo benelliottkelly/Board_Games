@@ -20,3 +20,15 @@ footer {
     text-decoration: underline;
   }
 }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  footer {
+    p {
+      font-size: 1em;
+    }
+    .link {
+      font-size: 1em;
+    }
+  }
+}
