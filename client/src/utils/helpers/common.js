@@ -29,7 +29,6 @@ export function activeUser(){
   // If token exists...
   const b64 = token.split('.')[1]
   const payload = JSON.parse(atob(b64))
-  console.log(payload)
   const now = Date.now() / 1000
   const exp = payload.exp
   if (exp > now){

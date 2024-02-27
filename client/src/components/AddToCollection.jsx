@@ -32,7 +32,6 @@ export default function AddToCollection() {
 
   function handleChange(e){
     setFormData({ ...formData, [e.target.name]: e.target.value })
-    console.log('formData -> ', formData)
   }
 
   const handleSubmit = async (e) => {

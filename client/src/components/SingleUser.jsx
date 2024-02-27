@@ -12,7 +12,6 @@ export default function SingleUser() {
   const { loggedIn, setLoggedIn } = useContext(loginContext)
 
   const loadedData = useLoaderData()
-  console.log(loadedData)
   const { pk, image, username, first_name, last_name, email, bio, games, reviews } = loadedData
 
   // States

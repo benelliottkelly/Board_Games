@@ -29,7 +29,6 @@ export default function Register() {
   }
 
   useEffect(() => {
-    console.log('res ->', res)
     if (res?.status === 201) {
       navigate('/login/')
     }

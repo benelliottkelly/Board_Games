@@ -43,10 +43,6 @@ export default function NavProfile(){
     navigate(`/login/`)
   }
 
-  function testFunction(){
-    console.log('Hello')
-  }
-
   return(
     <>
       { loggedIn === true && profileData ? <div className="nav-profile">

@@ -35,7 +35,6 @@ export default function EditBoardGame() {
 
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value })
-    console.log('formData -> ', formData)
   }
 
   function handleArrayChange(e) {

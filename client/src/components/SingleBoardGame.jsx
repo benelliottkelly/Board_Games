@@ -14,7 +14,6 @@ export default function SingleBoardGame() {
   const navigate = useNavigate()
   const loadedData = useLoaderData()
   const { boardGame, Genres } = loadedData
-  console.log(boardGame)
   const { created_by, date_added, description, genre, id, image, owned_by, publisher, reviews, title, year } = boardGame
 
   // States

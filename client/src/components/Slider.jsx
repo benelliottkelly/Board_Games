@@ -14,7 +14,6 @@ export default function Slider() {
   useEffect(() => {
     async function getData() {
       const res = await boardGamesLoader()
-      console.log(res)
       const { boardgames, genres } = res
       setBoardGames(boardgames)
       setIsLoading(false)

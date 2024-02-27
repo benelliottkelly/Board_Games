@@ -46,7 +46,6 @@ export async function addBoardGameToCollection(request){
       Authorization: `Bearer ${getToken()}`
     }
   })
-  console.log('Res from add to collection', res)
   return res
 }
 
