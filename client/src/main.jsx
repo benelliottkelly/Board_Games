@@ -66,7 +66,6 @@ const router = createBrowserRouter([
       {
         path: '/boardgames/create',
         element: <CreateBoardGame />,
-        // add action here
         loader: boardGamesLoader
       },
       {
@@ -93,7 +92,6 @@ const router = createBrowserRouter([
       {
         path: '/genres/create',
         element: <CreateGenre />,
-        // add action here
         loader: genresLoader
       },
       {
@@ -104,7 +102,6 @@ const router = createBrowserRouter([
       {
         path: '/genres/:genrepk/edit',
         element: <EditGenre />,
-        // add action here
         loader: async ({ params }) => singleGenreLoader(params.genrepk)
       }
     ],

@@ -10,14 +10,14 @@ from rest_framework.response import Response
 # Path: /reviews/
 # Methods: GET, POST
 class ReviewCreateView(OwnerListCreateView):
-  queryset = Review.objects.all()
+  queryset = Review.objects.all().select_related('created_by', 'board_game').prefetch_related('likes')
   serializer_class = ReviewSerializer
   permission_classes = [IsAuthenticatedOrReadOnly]
 
 # Path: /reviews/:pk/
 # Methods: PUT, PATCH
 class ReviewLikeView(UpdateAPIView):
-  queryset = Review.objects.all()
+  queryset = Review.objects.all().select_related('created_by', 'board_game').prefetch_related('likes')
   serializer_class = PopulatedReviewSerializer
   permission_classes = [IsAuthenticated]
 

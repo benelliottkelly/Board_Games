@@ -9,7 +9,7 @@ from rest_framework.generics import RetrieveUpdateDestroyAPIView, ListCreateAPIV
 # Path: /gamesowned
 # Methods: GET, POST
 class GameOwnedListCreateView(ListCreateAPIView):
-  queryset = GameOwned.objects.all()
+  queryset = GameOwned.objects.all().select_related('game', 'game_owner')
   serializer_class = GameOwnedSerializer
   permission_classes = [IsOwnerOrReadOnly]
 
@@ -18,7 +18,7 @@ class GameOwnedListCreateView(ListCreateAPIView):
 # Path: /gamesowned/:pk
 # Methods: GET, PUT, PATCH, DELETE
 class GameOwnedDetailView(RetrieveUpdateDestroyAPIView):
-  queryset = GameOwned.objects.all()
+  queryset = GameOwned.objects.all().select_related('game', 'game_owner')
   permission_classes = [IsOwnerOrReadOnly]
 
   def get_serializer_class(self):

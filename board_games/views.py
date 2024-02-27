@@ -10,7 +10,7 @@ from rest_framework.generics import RetrieveUpdateDestroyAPIView
 # Path: /boardgames
 # Methods: GET, POST
 class BoardGameListCreateView(OwnerListCreateView):
-  queryset = BoardGame.objects.all()
+  queryset = BoardGame.objects.all().select_related('created_by').prefetch_related('genre', 'owned_by')
   # serializer_class = PopulatedBoardGameSerializer
   permission_classes = [IsAuthenticatedOrReadOnly]
 
@@ -22,7 +22,7 @@ class BoardGameListCreateView(OwnerListCreateView):
 # Path: /boardgames/:pk
 # Methods: GET, PUT, PATCH, DELETE
 class BoardGameDetailView(RetrieveUpdateDestroyAPIView):
-  queryset = BoardGame.objects.all()
+  queryset = BoardGame.objects.all().select_related('created_by').prefetch_related('genre', 'owned_by')
   permission_classes = [IsOwnerOrReadOnly]
 
   def get_serializer_class(self):

@@ -89,7 +89,7 @@ export default function AllBoardGames() {
       <article className='library-info'>
         <p>Welcome to the board game library.</p>
         <p>To add a game to the library click <button onClick={() => setShowModal(true)} className='btn btn-add-game'>Add Game</button>.</p>
-        <p>To add an existing game to your collection click the <span id='add-explainer'>+</span> button and input how many boxes of the game you own.</p>
+        <p>To add an existing game to your collection click the <span id='add-explainer'>+</span> button and input how many copies of the game you own.</p>
         <p>Or to view the game in greater detail click on the box itself.</p>
       </article>
       {isLoading ? (
